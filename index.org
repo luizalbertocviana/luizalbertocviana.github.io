@@ -1,4 +1,20 @@
-#+title: Minha Página: eu que escrevi
+#+title:  Minha Página: eu que escrevi
 #+author: Luiz Alberto do Carmo Viana
 
-[[file:teste.org][teste]]
+Professor da Universidade Federal do Ceará, no Campus de Crateús.
+
+Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
+
+* Contato
+  - email pessoal: [[mailto:luizalbertocviana@gmail.com][luizalbertocviana@gmail.com]]
+  - email profissional: [[mailto:luizalberto@crateus.ufc.br][luizalberto@crateus.ufc.br]]
+  - github: https://github.com/luizalbertocviana
+* Artigos
+  - The Least-Dependency Constrained Spanning Tree Problem [[http://csbc2017.mackenzie.br/public/files/all/anais-csbc-2017.pdf][link]]
+  - Two Dependency Constrained Spanning Tree Problems [[file:articles/168962.pdf][link]]
+  - Um Algoritmo Exato para o Problema da Biclique Induzida Balanceada
+    Máxima com Partições em Cliques e Bonecas Russas [[file:articles/108173.pdf][link]]
+  - Uma Abordagem Híbrida Exata-Heurística Aplicada ao Problema do
+    Ciclo Mediano sem Restrições de Capacidade [[file:articles/108185.pdf][link]]
+  - The Generalized Dependency Constrained Spanning Tree Problem [[file:articles/TGDCSTP.pdf][link]]
+* Disciplinas

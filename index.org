@@ -25,10 +25,10 @@ Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
   - *ENTCS* The Generalized Dependency Constrained Spanning Tree
     Problem ([[manoel]]) [[file:articles/TGDCSTP.pdf][link]]
 * Orientações de graduação
-  - Bruno Teixeira de Sousa
-  - João Paulo de Araújo
-  - Marcus Vinícius Martins Melo
-  - Paulo Henrique Sousa de Araújo
+  - Bruno Teixeira de Sousa ([[lisieux]]) [[file:tutoring/2019_bruno.pdf][pdf]]
+  - João Paulo de Araújo ([[rennan]])
+  - Marcus Vinícius Martins Melo ([[rennan]])
+  - Paulo Henrique Sousa de Araújo ([[lisieux]])
 * Colaboradores
   1. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
   2. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]

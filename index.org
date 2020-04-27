@@ -8,9 +8,9 @@ Professor da Universidade Federal do Ceará, no Campus de Crateús.
 Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
 
 * Contato
-  - email pessoal: [[mailto:luizalbertocviana@gmail.com][luizalbertocviana@gmail.com]]
-  - email profissional: [[mailto:luizalberto@crateus.ufc.br][luizalberto@crateus.ufc.br]]
-  - github: https://github.com/luizalbertocviana
+  - Email pessoal: [[mailto:luizalbertocviana@gmail.com][luizalbertocviana@gmail.com]]
+  - Email profissional: [[mailto:luizalberto@crateus.ufc.br][luizalberto@crateus.ufc.br]]
+  - Github: https://github.com/luizalbertocviana
 * Artigos
 ** 2017
   - *CSBC* The Least-Dependency Constrained Spanning Tree Problem
@@ -25,3 +25,13 @@ Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
   - *ENTCS* The Generalized Dependency Constrained Spanning Tree
     Problem [[file:articles/TGDCSTP.pdf][link]]
 * Disciplinas
+  - Álgebra Linear (2018.2)
+  - Estrutura de Dados (2016.2, 2018.2)
+  - Estrutura de Dados Avançada (2020.1)
+  - Linguagens Formais e Autômatos (2018.2, 2019.2)
+  - Matemática Básica (2017.2)
+  - Matemática Computacional (2017.1, 2018.1, 2019.1, 2020.1)
+  - Matemática Discreta (2016.2)
+  - Programação Funcional (2017.1, 2018.1, 2019.1)
+  - Projeto e Análise de Algoritmos (2019.2)
+  - Teoria da Computação (2017.2, 2018.2)

@@ -1,4 +1,4 @@
-#+title:  Minha Página: eu que escrevi
+#+title:  Luiz Alberto do Carmo Viana
 #+author: Luiz Alberto do Carmo Viana
 
 Professor da Universidade Federal do Ceará, no Campus de Crateús.

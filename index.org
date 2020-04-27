@@ -47,13 +47,26 @@ Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
   5. <<paulo>> Paulo Henrique Sousa de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
   6. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
 * Disciplinas
-  - Álgebra Linear (2018.2)
-  - Estrutura de Dados (2016.2, 2018.2)
-  - Estrutura de Dados Avançada (2020.1)
-  - Linguagens Formais e Autômatos (2018.2, 2019.2)
-  - Matemática Básica (2017.2)
-  - Matemática Computacional (2017.1, 2018.1, 2019.1, 2020.1)
-  - Matemática Discreta (2016.2)
-  - Programação Funcional (2017.1, 2018.1, 2019.1)
-  - Projeto e Análise de Algoritmos (2019.2)
-  - Teoria da Computação (2017.2, 2018.2)
+  - Álgebra Linear
+    - semestres: 2018.2
+  - Estrutura de Dados
+    - semestres: 2016.2, 2018.2
+  - Estrutura de Dados Avançada
+    - semestres: 2020.1
+    - notas de aula: [[file:eda/notas.pdf][pdf]]
+  - Linguagens Formais e Autômatos
+    - semestres: 2018.2, 2019.2
+  - Matemática Básica
+    - semestres: 2017.2
+  - Matemática Computacional
+    - semestres: 2017.1, 2018.1, 2019.1, 2020.1
+    - notas de aula: [[file:mc/notas.pdf][pdf]]
+  - Matemática Discreta
+    - semestres: 2016.2
+  - Programação Funcional
+    - semestres: 2017.1, 2018.1, 2019.1
+    - notas de aula: [[file:pf/notas.pdf][pdf]]
+  - Projeto e Análise de Algoritmos
+    - semestres: 2019.2
+  - Teoria da Computação
+    - semestres: 2017.2, 2018.2

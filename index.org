@@ -13,17 +13,23 @@ Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
   - Github: https://github.com/luizalbertocviana
 * Artigos
 ** 2017
-  - *CSBC* The Least-Dependency Constrained Spanning Tree Problem
+  - *CSBC* The Least-Dependency Constrained Spanning Tree Problem ([[manoel]])
     [[http://csbc2017.mackenzie.br/public/files/all/anais-csbc-2017.pdf][link]]
-  - *SBPO* Two Dependency Constrained Spanning Tree Problems [[file:articles/168962.pdf][link]]
+  - *SBPO* Two Dependency Constrained Spanning Tree Problems ([[manoel]]) [[file:articles/168962.pdf][link]]
 ** 2019
   - *SBPO* Um Algoritmo Exato para o Problema da Biclique
     Induzida Balanceada Máxima com Partições em Cliques e Bonecas
-    Russas [[file:articles/108173.pdf][link]]
+    Russas ([[marcus]], [[rennan]]) [[file:articles/108173.pdf][link]]
   - *SBPO* Uma Abordagem Híbrida Exata-Heurística Aplicada ao
-    Problema do Ciclo Mediano sem Restrições de Capacidade [[file:articles/108185.pdf][link]]
+    Problema do Ciclo Mediano sem Restrições de Capacidade ([[paulo]], [[lisieux]]) [[file:articles/108185.pdf][link]]
   - *ENTCS* The Generalized Dependency Constrained Spanning Tree
-    Problem [[file:articles/TGDCSTP.pdf][link]]
+    Problem ([[manoel]]) [[file:articles/TGDCSTP.pdf][link]]
+* Colaboradores
+  1. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
+  2. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
+  3. <<marcus>> Marcus Vinícius Martins Melo [[http://lattes.cnpq.br/6091624045920112][Lattes]]
+  4. <<paulo>> Paulo Henrique de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
+  5. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
 * Disciplinas
   - Álgebra Linear (2018.2)
   - Estrutura de Dados (2016.2, 2018.2)

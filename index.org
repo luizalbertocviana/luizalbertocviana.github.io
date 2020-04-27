@@ -13,28 +13,39 @@ Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
   - Github: https://github.com/luizalbertocviana
 * Artigos
 ** 2017
-  - *CSBC* The Least-Dependency Constrained Spanning Tree Problem ([[manoel]])
-    [[http://csbc2017.mackenzie.br/public/files/all/anais-csbc-2017.pdf][link]]
-  - *SBPO* Two Dependency Constrained Spanning Tree Problems ([[manoel]]) [[file:articles/168962.pdf][link]]
+  - *CSBC* The Least-Dependency Constrained Spanning Tree Problem
+    ([[manoel]]) [[http://csbc2017.mackenzie.br/public/files/all/anais-csbc-2017.pdf][link]]
+  - *SBPO* Two Dependency Constrained Spanning Tree Problems ([[manoel]])
+    [[http://www.sbpo2017.iltc.br/pdf/168962.pdf][link]]
 ** 2019
-  - *SBPO* Um Algoritmo Exato para o Problema da Biclique
-    Induzida Balanceada Máxima com Partições em Cliques e Bonecas
-    Russas ([[marcus]], [[rennan]]) [[file:articles/108173.pdf][link]]
-  - *SBPO* Uma Abordagem Híbrida Exata-Heurística Aplicada ao
-    Problema do Ciclo Mediano sem Restrições de Capacidade ([[paulo]], [[lisieux]]) [[file:articles/108185.pdf][link]]
+  - *SBPO* Um Algoritmo Exato para o Problema da Biclique Induzida
+    Balanceada Máxima com Partições em Cliques e Bonecas Russas
+    ([[marcus]], [[rennan]]) [[https://proceedings.science/proceedings/100090/_papers/106757/download/abstract_file2?lang=pt-br][link]]
+  - *SBPO* Uma Abordagem Híbrida Exata-Heurística Aplicada ao Problema
+    do Ciclo Mediano sem Restrições de Capacidade ([[paulo]], [[lisieux]])
+    [[https://proceedings.science/proceedings/100090/_papers/106758/download/abstract_file2?lang=pt-br][link]]
   - *ENTCS* The Generalized Dependency Constrained Spanning Tree
-    Problem ([[manoel]]) [[file:articles/TGDCSTP.pdf][link]]
+    Problem ([[manoel]]) [[https://reader.elsevier.com/reader/sd/pii/S1571066119301136?token=5C49470DC0048D2D2C2B3AD4828CCBA66C7AE52E3FEA38F89E30BA45D83DFBCDCF87FE5A8D40B9439009536BC62A65D4][link]]
+** 2020
+   - *ITOR* Two Dependency Constrained Spanning Tree Problems ([[manoel]])
+     [[https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12690][link]]
+* Outros trabalhos
+** 2019
+   - Um Modelo de Programação Inteira Aplicado ao Problema de Alocação
+     de Salas da Universidade Federal do Ceará - Campus Crateús
+     ([[bruno]], [[lisieux]]) [[https://proceedings.science/proceedings/100090/_papers/106943/download/abstract_file2?lang=pt-br][link]]
 * Orientações de graduação
   - Bruno Teixeira de Sousa ([[lisieux]]) [[file:tutoring/2019_bruno.pdf][pdf]]
   - João Paulo de Araújo ([[rennan]])
   - Marcus Vinícius Martins Melo ([[rennan]])
   - Paulo Henrique Sousa de Araújo ([[lisieux]])
 * Colaboradores
-  1. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
-  2. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
-  3. <<marcus>> Marcus Vinícius Martins Melo [[http://lattes.cnpq.br/6091624045920112][Lattes]]
-  4. <<paulo>> Paulo Henrique Sousa de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
-  5. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
+  1. <<bruno>> Bruno Teixeira de Sousa [[http://lattes.cnpq.br/5987909872617550][Lattes]]
+  2. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
+  3. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
+  4. <<marcus>> Marcus Vinícius Martins Melo [[http://lattes.cnpq.br/6091624045920112][Lattes]]
+  5. <<paulo>> Paulo Henrique Sousa de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
+  6. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
 * Disciplinas
   - Álgebra Linear (2018.2)
   - Estrutura de Dados (2016.2, 2018.2)

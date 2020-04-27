@@ -24,11 +24,16 @@ Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
     Problema do Ciclo Mediano sem Restrições de Capacidade ([[paulo]], [[lisieux]]) [[file:articles/108185.pdf][link]]
   - *ENTCS* The Generalized Dependency Constrained Spanning Tree
     Problem ([[manoel]]) [[file:articles/TGDCSTP.pdf][link]]
+* Orientações de graduação
+  - Bruno Teixeira de Sousa
+  - João Paulo de Araújo
+  - Marcus Vinícius Martins Melo
+  - Paulo Henrique Sousa de Araújo
 * Colaboradores
   1. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
   2. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
   3. <<marcus>> Marcus Vinícius Martins Melo [[http://lattes.cnpq.br/6091624045920112][Lattes]]
-  4. <<paulo>> Paulo Henrique de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
+  4. <<paulo>> Paulo Henrique Sousa de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
   5. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
 * Disciplinas
   - Álgebra Linear (2018.2)

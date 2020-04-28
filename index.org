@@ -1,7 +1,7 @@
 #+title:  Luiz Alberto do Carmo Viana
 #+author: Luiz Alberto do Carmo Viana
 
-#+options: toc:nil
+#+setupfile: org-html-themes/setup/theme-bigblow-local.setup
 
 Professor da Universidade Federal do Ceará, no Campus de Crateús.
 

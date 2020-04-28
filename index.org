@@ -3,7 +3,8 @@
 
 #+setupfile: org-html-themes/setup/theme-bigblow-local.setup
 
-Professor da Universidade Federal do Ceará, no Campus de Crateús.
+Professor da Universidade Federal do Ceará, no Campus de Crateús,
+lecionando principalmente no curso de Ciência da Computação.
 
 Você pode consultar meu Lattes aqui: http://lattes.cnpq.br/2028165237751191
 

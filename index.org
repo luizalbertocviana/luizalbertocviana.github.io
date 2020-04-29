@@ -8,8 +8,7 @@ lecionando principalmente no curso de Ciência da Computação.
 
 Você pode consultar meu Lattes em http://lattes.cnpq.br/2028165237751191
 
-Você pode visitar o repositorio desse site [[https://github.com/luizalbertocviana/luizalbertocviana.github.io][aqui]]. Sinta-se livre para
-um /fork/.
+Você pode visitar o repositorio desse site [[https://github.com/luizalbertocviana/luizalbertocviana.github.io][aqui]].
 
 * Contato
   - Email pessoal: [[mailto:luizalbertocviana@gmail.com][luizalbertocviana@gmail.com]]

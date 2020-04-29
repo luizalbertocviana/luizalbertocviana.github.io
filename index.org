@@ -43,13 +43,15 @@ Você pode visitar o repositorio desse site [[https://github.com/luizalbertocvia
   - Marcus Vinícius Martins Melo ([[rennan]]) [[http://repositorio.ufc.br/handle/riufc/43970][link]]
   - Paulo Henrique Sousa de Araújo ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/49078][link]]
 * Colaboradores
+** Docentes
+  1. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
+  2. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
+  3. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
+** Discentes
   1. <<bruno>> Bruno Teixeira de Sousa [[http://lattes.cnpq.br/5987909872617550][Lattes]]
   2. <<alex>> Francisco Alex Sousa Anchieta [[http://lattes.cnpq.br/2903943249633436][Lattes]]
-  3. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
-  4. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
-  5. <<marcus>> Marcus Vinícius Martins Melo [[http://lattes.cnpq.br/6091624045920112][Lattes]]
-  6. <<paulo>> Paulo Henrique Sousa de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
-  7. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
+  3. <<marcus>> Marcus Vinícius Martins Melo [[http://lattes.cnpq.br/6091624045920112][Lattes]]
+  4. <<paulo>> Paulo Henrique Sousa de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
 * Disciplinas
 ** Álgebra Linear
    - semestres: 2018.2

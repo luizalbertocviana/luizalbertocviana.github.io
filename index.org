@@ -68,7 +68,7 @@ Você pode visitar o repositorio desse site [[https://github.com/luizalbertocvia
     - semestres: 2016.2
   - Programação Funcional
     - semestres: 2017.1, 2018.1, 2019.1
-    - notas de aula: [[file:pf/notas.pdf][pdf]]
+    - notas de aula: [[file:pf/notas.pdf][pdf]] [[file:pf/notas.tex][tex]]
   - Projeto e Análise de Algoritmos
     - semestres: 2019.2
   - Teoria da Computação

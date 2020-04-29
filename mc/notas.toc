@@ -1,0 +1,46 @@
+\babel@toc {brazil}{}
+\contentsline {section}{\numberline {1}Interpolações polinomiais}{3}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Polinômio de Lagrange}{3}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Polinômio de Taylor}{5}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}Zeros de funções}{8}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Método da posição falsa}{9}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Método de Newton}{11}{subsection.2.2}% 
+\contentsline {section}{\numberline {3}Integração numérica}{14}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Regra do trapézio}{14}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Regra de Simpson}{18}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Introdução às quadraturas de Gauss-Legendre}{20}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Integrais duplas}{24}{subsection.3.4}% 
+\contentsline {section}{\numberline {4}Derivação numérica}{25}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}A abordagem mais simples}{25}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Utilizando a Expansão de Taylor}{26}{subsection.4.2}% 
+\contentsline {section}{\numberline {5}Álgebra Linear Computacional}{29}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Definições}{29}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Sistemas lineares}{31}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Pivoteamentos parcial e total}{36}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {5.4}Decomposição LU}{39}{subsection.5.4}% 
+\contentsline {section}{\numberline {6}Programação Linear}{43}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Modelagem matemática}{44}{subsection.6.1}% 
+\contentsline {subsubsection}{\numberline {6.1.1}Problema da dieta}{44}{subsubsection.6.1.1}% 
+\contentsline {subsubsection}{\numberline {6.1.2}Planejamento da força de trabalho}{45}{subsubsection.6.1.2}% 
+\contentsline {subsubsection}{\numberline {6.1.3}Planejamento de produção}{46}{subsubsection.6.1.3}% 
+\contentsline {subsubsection}{\numberline {6.1.4}Problema do transporte}{47}{subsubsection.6.1.4}% 
+\contentsline {subsubsection}{\numberline {6.1.5}Emparelhamento máximo}{47}{subsubsection.6.1.5}% 
+\contentsline {subsubsection}{\numberline {6.1.6}Cobertura mínima}{48}{subsubsection.6.1.6}% 
+\contentsline {subsubsection}{\numberline {6.1.7}Caminho de custo mínimo}{49}{subsubsection.6.1.7}% 
+\contentsline {subsubsection}{\numberline {6.1.8}Árvore geradora mínima}{49}{subsubsection.6.1.8}% 
+\contentsline {subsubsection}{\numberline {6.1.9}Conjunto dominante mínimo}{51}{subsubsection.6.1.9}% 
+\contentsline {subsubsection}{\numberline {6.1.10}Árvore dominante mínima}{51}{subsubsection.6.1.10}% 
+\contentsline {subsubsection}{\numberline {6.1.11}Árvore de Steiner}{52}{subsubsection.6.1.11}% 
+\contentsline {subsubsection}{\numberline {6.1.12}Coloração de vértices}{53}{subsubsection.6.1.12}% 
+\contentsline {subsection}{\numberline {6.2}Forma padrão de um programa linear}{53}{subsection.6.2}% 
+\contentsline {subsection}{\numberline {6.3}Resolvendo um programa linear}{55}{subsection.6.3}% 
+\contentsline {subsubsection}{\numberline {6.3.1}Definições}{55}{subsubsection.6.3.1}% 
+\contentsline {subsubsection}{\numberline {6.3.2}O método Simplex}{56}{subsubsection.6.3.2}% 
+\contentsline {section}{\numberline {7}Programação Inteira}{62}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Cortes de Gomory-Chvátal}{62}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Relaxação lagrangeana e dualidade}{64}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Branch and Bound}{68}{subsection.7.3}% 
+\contentsline {section}{\numberline {8}Problema de Fluxo Máximo}{70}{section.8}% 
+\contentsline {subsection}{\numberline {8.1}Definição}{70}{subsection.8.1}% 
+\contentsline {subsection}{\numberline {8.2}Propriedades}{71}{subsection.8.2}% 
+\contentsline {subsection}{\numberline {8.3}Dualidade e Ford-Fulkerson}{73}{subsection.8.3}% 

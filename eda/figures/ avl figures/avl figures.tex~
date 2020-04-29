@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\usepackage{subfigure}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{figure}
+  \subfigure[Antes da rotação]{
+    \begin{tikzpicture}
+      \node[circle, draw] (node) at (1, 1) {$node$};
+      \node[circle, draw] (left) [below left = 1cm of node] {$left$};
+      \node[rectangle, minimum height = 2cm, minimum width = 1cm, draw] (subtreeR) [below right = 1cm of node] {\texttt{R}};
+      \node[rectangle, minimum height = 3cm, minimum width = 1cm, draw] (subtreeLL) [below left = 1cm of left] {\texttt{LL}};
+      \node[rectangle, minimum height = 2cm, minimum width = 1cm, draw] (subtreeLR) [below right = 1cm of left] {\texttt{LR}};
+
+      % alturas
+      \node [above = 0.1cm of node] {$h + 2$};
+      \node [above = 0.1cm of left] {$h + 1$};
+      \node [above = 0.1cm of subtreeLL] {$h$};
+      \node [above = 0.1cm of subtreeLR] {$h - 1$};
+      \node [above = 0.1cm of subtreeR] {$h - 1$};
+
+      \draw (node) edge[->] (left);
+      \draw (node) edge[->] (subtreeR);
+      \draw (left) edge[->] (subtreeLL);
+      \draw (left) edge[->] (subtreeLR);
+    \end{tikzpicture}
+  }
+  \quad
+  \subfigure[Depois da rotação]{
+    \begin{tikzpicture}
+      \node[circle, draw] (left) at (1, 1) {$left$};
+      \node[circle, draw] (node) [below right = 1cm of left] {$node$};
+      \node[rectangle, minimum height = 3cm, minimum width = 1cm, draw] (subtreeLL) [below left = 1cm of left] {\texttt{LL}};
+      \node[rectangle, minimum height = 2cm, minimum width = 1cm, draw] (subtreeLR) [below left = 1cm of node] {\texttt{LR}};
+      \node[rectangle, minimum height = 2cm, minimum width = 1cm, draw] (subtreeR) [below right = 1cm of node] {\texttt{R}};
+
+
+      % alturas
+      \node [above = 0.1cm of node] {$h$};
+      \node [above = 0.1cm of left] {$h + 1$};
+      \node [above = 0.1cm of subtreeLL] {$h$};
+      \node [above = 0.1cm of subtreeLR] {$h - 1$};
+      \node [above = 0.1cm of subtreeR] {$h - 1$};
+
+      \draw (left) edge[->] (node);
+      \draw (node) edge[->] (subtreeR);
+      \draw (left) edge[->] (subtreeLL);
+      \draw (node) edge[->] (subtreeLR);
+    \end{tikzpicture}
+  }
+  \caption{Rotação simples à direita.  Nós representados como círculos
+    e sub-árvores como retângulos.  Acima dos nós e sub-árvores,
+    representamos sua altura.}
+\end{figure}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

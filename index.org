@@ -56,7 +56,7 @@ Você pode visitar o repositorio desse site [[https://github.com/luizalbertocvia
     - semestres: 2016.2, 2018.2
   - Estrutura de Dados Avançada
     - semestres: 2020.1
-    - notas de aula: [[file:eda/notas.pdf][pdf]] [[file:eda/notas.org][org]]
+    - notas de aula: [[file:eda/notas.pdf][pdf]]
   - Linguagens Formais e Autômatos
     - semestres: 2018.2, 2019.2
   - Matemática Básica

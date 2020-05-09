@@ -33,10 +33,10 @@ Você pode visitar o repositorio desse site [[https://github.com/luizalbertocvia
    - *ITOR* Two Dependency Constrained Spanning Tree Problems ([[manoel]])
      [[https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12690][link]]
 * Outros trabalhos
-** 2019
-   - Um Modelo de Programação Inteira Aplicado ao Problema de Alocação
-     de Salas da Universidade Federal do Ceará - Campus Crateús
-     ([[bruno]], [[lisieux]]) [[https://proceedings.science/proceedings/100090/_papers/106943/download/abstract_file2?lang=pt-br][link]]
+** Resumos Estendidos e Pôsteres
+   - *SBPO 2019* Um Modelo de Programação Inteira Aplicado ao Problema
+     de Alocação de Salas da Universidade Federal do Ceará - Campus
+     Crateús ([[bruno]], [[lisieux]]) [[https://proceedings.science/proceedings/100090/_papers/106943/download/abstract_file2?lang=pt-br][link]]
 * Orientações de graduação
   - Bruno Teixeira de Sousa ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/48318][link]]
   - João Paulo de Araújo ([[rennan]]) [[http://repositorio.ufc.br/handle/riufc/43969][link]]

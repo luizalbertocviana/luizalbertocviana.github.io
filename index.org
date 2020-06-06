@@ -37,6 +37,15 @@ Você pode visitar o repositorio desse site [[https://github.com/luizalbertocvia
    - *SBPO 2019* Um Modelo de Programação Inteira Aplicado ao Problema
      de Alocação de Salas da Universidade Federal do Ceará - Campus
      Crateús ([[bruno]], [[lisieux]]) [[https://proceedings.science/proceedings/100090/_papers/106943/download/abstract_file2?lang=pt-br][link]]
+** Repositórios
+   - [[https://github.com/luizalbertocviana/cracking-coding-problems][cracking-coding-problems]] contém soluções para os problemas
+     propostos pelo livro Cracking the Coding Interview, em C++.
+   - [[https://github.com/luizalbertocviana/data-structures-cpp][data-structures-cpp]] é uma coleção de estruturas de dados
+     clássicas, implementadas em C++ com fins didáticos.
+   - [[https://github.com/luizalbertocviana/dotfiles][dotfiles]] contém o setup do meu ambiente de trabalho. Destaque
+     para as configurações do Emacs e i3wm.
+   - [[https://github.com/luizalbertocviana/lisp-experiments][lisp-experiments]] é uma coleção de códigos-fonte escritos em
+     Common Lisp. Genérico, com o propósito de aprender a linguagem.
 * Orientações de graduação
   - Bruno Teixeira de Sousa ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/48318][link]]
   - João Paulo de Araújo ([[rennan]]) [[http://repositorio.ufc.br/handle/riufc/43969][link]]

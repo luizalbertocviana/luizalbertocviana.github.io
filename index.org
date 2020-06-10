@@ -46,6 +46,8 @@ Você pode visitar o repositorio desse site [[https://github.com/luizalbertocvia
      para as configurações do Emacs e i3wm.
    - [[https://github.com/luizalbertocviana/lisp-experiments][lisp-experiments]] é uma coleção de códigos-fonte escritos em
      Common Lisp. Genérico, com o propósito de aprender a linguagem.
+** Slides
+   - Uma apresentação sobre C++ moderno: [[file:slides/cpp.pdf][pdf]] [[file:slides/cpp.tex][tex]]
 * Orientações de graduação
   - Bruno Teixeira de Sousa ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/48318][link]]
   - João Paulo de Araújo ([[rennan]]) [[http://repositorio.ufc.br/handle/riufc/43969][link]]

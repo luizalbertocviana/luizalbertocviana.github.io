@@ -1,0 +1,955 @@
+% Created 2020-06-08 seg 18:46
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[newfloat, cache = false]{minted}
+\RequirePackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\scriptsize}
+\usetheme{default}
+\author{Luiz Alberto do Carmo Viana}
+\date{\today}
+\title{Modern C++}
+\hypersetup{
+ pdfauthor={Luiz Alberto do Carmo Viana},
+ pdftitle={Modern C++},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.3.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+
+\section{Introduction}
+\label{sec:org1bcbcfd}
+\begin{frame}[label={sec:org3bf9bb6},fragile]{History}
+ \begin{itemize}
+\item C with Classes: created by Bjarne Stroustrup at Bell Labs in 1979.
+\item C++98: first standard.
+\item C++03: requires that elements in \texttt{vector} are stored contiguously.
+\item C++11: legacy support; big changes; modern C++.
+\item C++14: better type deduction; generic lambdas; variable
+templates.
+\begin{itemize}
+\item This is the default standard of GCC.
+\end{itemize}
+\item C++17: \texttt{optional}; \texttt{any}; \texttt{variant}.
+\item C++20: to be finished (don't touch it, corona).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org1b69872},fragile]{Hello World}
+ \begin{verbatim}
+1  #include <iostream>
+2  
+3  int main(){
+4    std::cout << "Hello World" << std::endl;
+5  
+6    return 0;
+7  }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org420774d}]{Overview}
+\begin{itemize}
+\item Extended C syntax.
+\item Large language: significant amount of legacy; focus on modern
+subset.
+\item Nearly no overhead abstractions: as C, good mapping to hardware.
+\end{itemize}
+\end{frame}
+
+\section{Features}
+\label{sec:orgfd16063}
+\begin{frame}[label={sec:orgefdb4dd},fragile]{Features}
+ Uniform initialization \texttt{\{\}}:
+
+\begin{verbatim}
+ 1  // initialization: calls constructor
+ 2  int a{}; // a == 0
+ 3  int x{1};
+ 4  std::string word{"apple"};
+ 5  // assignment: calls operator=
+ 6  int x = 1;
+ 7  std::string word = "apple"; // calls constructor, but is misleading
+ 8  word = "orange"; // here it does call operator=
+ 9  // initialization does not perform invisible conversions
+10  int y = 3.5; // y == 3
+11  int y{3.5}; // error
+12  // container constructors may bring ambiguities
+13  std::vector<int> vec{10}; // vec contains one int element of value 10
+14  std::vector<int> vec(10); // vec contains ten int elements of value 0
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org1863c32},fragile]{Features}
+ \begin{itemize}
+\item \texttt{auto} keyword: type deduction.
+\item Useful: less typing; type change propagation; generic programming.
+\end{itemize}
+
+\begin{verbatim}
+1  auto a{true}; // bool
+2  auto b{'a'}; // char
+3  auto c{49}; // int
+4  auto d{1.0}; // double
+5  auto e{f(x)}; // e has the return type of f
+6  
+7  std::vector<int> vec{1, 2, 3};
+8  auto it = std::begin(vec); // std::vector<int>::iterator
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org8e3744d},fragile]{Features}
+ \begin{itemize}
+\item \texttt{const}: variable that cannot be changed; function that promises
+not to change anything.
+\item \texttt{constexpr}: compile-time functions, variables and expressions.
+\item \texttt{constexpr const} is not redundant.
+\end{itemize}
+
+\begin{verbatim}
+ 1  int global{3};
+ 2  
+ 3  constexpr int f(int x){
+ 4    return x * 2;
+ 5  }
+ 6  
+ 7  int g(int x){
+ 8    return global + x;
+ 9  }
+10  
+11  constexpr int a{f(2)}; // evaluated at compile time
+12  constexpr int b{f(a)}; // ok
+13  // ...
+14  // what if global has changed?
+15  const int x{global};
+16  constexpr int c{x}; // error
+17  constexpr int d{f(x)}; // error
+18  constexpr int e{global}; // error
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org4abdff7},fragile]{Features}
+ \begin{verbatim}
+1  int arr[10]; //uninitialized array
+2  int* ptr; // uninitialized pointer (dangerous)
+3  int* ptr{arr + 2}; // initialized pointer
+4  int x{*ptr}; // initialized with object that ptr points to
+5  int& ref{x}; // reference
+6  ref = 3; // x == 3
+7  int y{4};
+8  ref = y; // x == 4
+9  int& ref2; // error: references must be initialized
+\end{verbatim}
+
+\begin{itemize}
+\item References offer indirect access to a variable.
+\item After initialization, a reference cannot refer to something else.
+\item Useful as function arguments.
+\item \texttt{const} references offer a view over a variable.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgb0c6f70},fragile]{Features}
+ \begin{itemize}
+\item \texttt{nullptr}: more robust than \texttt{NULL} (\texttt{NULL} is still there, but
+forget it).
+\item \texttt{NULL} is just \texttt{0}.
+\item \texttt{nullptr} is the only value of type \texttt{nullptr\_t}.
+\item \texttt{color} is safe to call: no need to check \texttt{node} before calling
+it.
+\end{itemize}
+
+\begin{verbatim}
+1  Color color(const Node* node){
+2    return node->color;
+3  }
+4  
+5  Color color(nullptr_t leaf){
+6    return Color::black;
+7  }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:orgdd1f617},fragile]{Features}
+ An \texttt{enum class} defines a scoped enumerator with a type.
+
+\begin{verbatim}
+1  enum class Color{red, black};
+2  Color c{Color::red};
+3  c = Color::black;
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org782925c},fragile]{Features}
+ \begin{itemize}
+\item \texttt{namespace} declares or extends a collection of definitions.
+\item \texttt{std::string}: \texttt{string} is defined inside \texttt{namespace} \texttt{std}.
+\item \texttt{namespace} is useful for avoiding name conflicts between
+libraries.
+\item Standard C++ definitions belong to \texttt{namespace} \texttt{std}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org2fef684},fragile]{Features}
+ Structured bindings make C++ feels modern.
+
+\begin{verbatim}
+ 1  std::pair<std::string, int> attach_length(const std::string& str){
+ 2    return std::make_pair(str, str.size());
+ 3  }
+ 4  
+ 5  std::string str1{"something"};
+ 6  auto[str2, len] = attach_length(str1);
+ 7  
+ 8  // use them together with uniform initialization
+ 9  std::vector<std::pair<int, int>> vec{};
+10  
+11  for(int i = 1; i <= 3; ++i){
+12    vec.push_back({i, i*10});
+13  }
+14  
+15  for(auto[a, b] : vec){
+16    std::cout << a << ' ' << b << std::endl;
+17  }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org9601d20},fragile]{Features}
+ Move semantics: instead of copying, moves objects.
+
+\begin{verbatim}
+1  // copy semantics
+2  std::string s1{"aaa"};
+3  std::string s2{"bbb"};
+4  s2 = s1; // s1 == "aaa", s2 == "aaa"
+5  // move semantics
+6  std::string s1{"aaa"};
+7  std::string s2{"bbb"};
+8  s2 = std::move(s1); // s1 is undefined, s2 == "aaa"
+\end{verbatim}
+
+\begin{itemize}
+\item \texttt{std::move(Type)} returns a \texttt{Type\&\&} (rvalue reference).
+\item It is undefined behaviour referencing a moved variable.
+\item Sometimes it is okay to do that.
+\item Good practice is not to touch moved things: don't take a chance.
+\end{itemize}
+\end{frame}
+
+\section{Classes}
+\label{sec:org6d3733f}
+\begin{frame}[label={sec:org03601a1},fragile]{Classes}
+ \begin{itemize}
+\item \texttt{struct} and \texttt{class} are quite the same:
+\begin{itemize}
+\item \texttt{struct} defaults to public members;
+\item \texttt{class} defaults to private members.
+\end{itemize}
+\item Let's focus on \texttt{class}.
+\end{itemize}
+
+\begin{verbatim}
+ 1  class Person{
+ 2    std::string name_;
+ 3    unsigned int age_;
+ 4  public:
+ 5    Person(std::string name, unsigned int age) : name_{name},
+ 6                                                 age_{age}
+ 7    {}
+ 8    const std::string& name() const{
+ 9      return name_;
+10    }
+11    unsigned int age() const{
+12      return age_;
+13    }
+14  };
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org305c311},fragile]{Classes}
+ \begin{itemize}
+\item A \texttt{class A} always has a (unless deleted):
+\begin{itemize}
+\item default constructor: \texttt{A a\{\}};
+\item copy constructor: \texttt{A a1\{args...\}; A a2\{a1\}};
+\item move constructor: \texttt{A a1\{args...\}; A a2\{std::move(a1)\}};
+\item copy assignment:
+\begin{verbatim}
+A a1{args...}, a2{args...};
+a2 = a1;
+\end{verbatim}
+\item move assignment:
+\begin{verbatim}
+A a1{args...}, a2{args...};
+a2 = std::move(a1);
+\end{verbatim}
+\item destructor:
+\begin{verbatim}
+{
+  A a1{args...};
+  ...
+} // ~A() is called here
+\end{verbatim}
+\end{itemize}
+\item If not provided, a implicitly declared implementation may be
+used:
+\begin{itemize}
+\item for each member variable, it calls its counterpart.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org3df06de},fragile]{Classes}
+ \texttt{Person p1\{...\}; Person p2\{...\};}
+\begin{itemize}
+\item \texttt{Person} has a implicitly declared:
+\begin{itemize}
+\item default constructor:
+\begin{itemize}
+\item \texttt{Person()} calls \texttt{name\_\{\}} and \texttt{age\_\{\}};
+\item it can be called with \texttt{Person p\{\}};
+\end{itemize}
+\item copy constructor:
+\begin{itemize}
+\item \texttt{Person(const Person\& p)} calls \texttt{name\_\{p.name\_\}} and
+\texttt{age\_\{p.age\_\}};
+\item it can be called with \texttt{p2\{p1\}};
+\end{itemize}
+\item move constructor:
+\begin{itemize}
+\item \texttt{Person(Person\&\& p)} calls \texttt{name\_\{std::move(p.name\_)\}} and
+\texttt{age\_\{std::move(p.age\_)\}};
+\item it can be called with \texttt{p2\{std::move(p1)\}}.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org70a4c64},fragile]{Classes}
+ \begin{itemize}
+\item \texttt{Person} has a implicitly declared:
+\begin{itemize}
+\item copy assignment:
+\begin{itemize}
+\item \texttt{Person\& operator=(const Person\& p)} calls \texttt{name\_ = p.name\_}
+and \texttt{age\_ = p.age\_};
+\item it can be called with \texttt{p1 = p2};
+\end{itemize}
+\item move assignment:
+\begin{itemize}
+\item \texttt{Person\& operator=(Person\&\& p)} calls \texttt{name\_ =
+         std::move(p.name\_)} and \texttt{age\_ = std::move(p.age\_)};
+\item it can be called with \texttt{p1 = std::move(p2)}.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:org17e0433},fragile]{Classes}
+ On \{default, copy, move\} constructors, \{copy, move\} assignments and
+destructor:
+\begin{itemize}
+\item It is okay for a \texttt{class A} to have all of them implicitly declared:
+\begin{itemize}
+\item if all members of \texttt{A} are language defined or;
+\item all user defined members of \texttt{A} are not special:
+\begin{itemize}
+\item does \texttt{A} deal with files or network connections in a special
+manner?
+\end{itemize}
+\end{itemize}
+\item if you need to write one of them, write all of them.
+\end{itemize}
+\end{frame}
+\section{Object Oriented Programming}
+\label{sec:org67736a2}
+\begin{frame}[label={sec:orgc71cd3d},fragile]{Object Oriented Programming}
+ \begin{itemize}
+\item Multiple inheritance:
+\begin{itemize}
+\item more powerful than single inheritance with interfaces;
+\item also more dangerous (inheritance conflicts);
+\item no \texttt{super} pointer.
+\end{itemize}
+\item Virtual classes: can't be instantiated.
+\item Virtual methods:
+\begin{itemize}
+\item interface-ish;
+\item a class with virtual methods is virtual as well.
+\end{itemize}
+\item \texttt{this} pointer.
+\item \texttt{super} pointer makes no sense with multiple inheritance.
+\end{itemize}
+\end{frame}
+\section{Templates}
+\label{sec:org59adffd}
+\begin{frame}[label={sec:org5867542},fragile]{Templates}
+ \begin{itemize}
+\item C++ metaprogramming device.
+\item Seen a lot of them so far (\texttt{std::vector<int>}).
+\end{itemize}
+
+\begin{verbatim}
+ 1  template<typename Type>
+ 2  Type square(const Type& n){
+ 3    return n*n;
+ 4  }
+ 5  
+ 6  int x{2};
+ 7  std::cout << square(x) << std::endl; // Type is deduced to be int
+ 8  std::cout << square<int>(x) << std::endl; // Type is set explicitly
+ 9  
+10  Matrix M{}; // suppose Matrix defines operator*
+11  Matrix A{square(M)}; // Type is deduced to be Matrix
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:orgcef9576},fragile]{Templates}
+ Templates can have default values:
+\begin{verbatim}
+ 1  template<typename Type = double>
+ 2  class Point{
+ 3    Type x_;
+ 4    Type y_;
+ 5  public:
+ 6    Point(Type x, Type y) : x_{x},
+ 7                            y_{y}
+ 8    {}
+ 9    Point operator+(const Point& p){
+10      return {x_ + p.x_, y_ + p.y_};
+11    }
+12  };
+13  
+14  Point x{0.0, 0.0};
+15  Point y{1.0, 1.0};
+16  Point z{x + y};
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org74fcaff},fragile]{Templates}
+ Beyond \texttt{typename}:
+\begin{verbatim}
+1  template<typename Type = double, unsigned int dimension = 3>
+2  class Point{
+3    std::array<Type, dimension> arr_;
+4  public:
+5    // ...
+6  };
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org8880807},fragile]{Templates}
+ \begin{itemize}
+\item We have seen template functions and template classes.
+\item What about template variables?
+\end{itemize}
+\begin{verbatim}
+1  template<typename Type>
+2  constexpr const Type pi{3.14159265358979323846};
+3  
+4  pi<float>; // a less precise pi
+5  pi<double>; // a more precise pi
+\end{verbatim}
+\begin{itemize}
+\item This is not the point of template variables.
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:orgdab6c76},fragile]{Templates}
+ Templates can be specialized:
+\begin{verbatim}
+ 1  template<typename Type>
+ 2  void read(Type& var){
+ 3    std::cin >> var;
+ 4  }
+ 5  
+ 6  template<>
+ 7  void read(std::string& var){
+ 8    std::cin >> std::ws;
+ 9    getline(std::cin, var);
+10  }
+\end{verbatim}
+
+Devise better implementations: \texttt{std::vector<bool>} is implemented bitwise.
+\end{frame}
+\begin{frame}[label={sec:orga953ff2},fragile]{Templates}
+ Template variables can be specialized as well.
+\begin{verbatim}
+1  template<typename A, typename B>
+2  constexpr const bool equal{false};
+3  
+4  template<typename Type>
+5  constexpr const bool equal<Type, Type>{true};
+\end{verbatim}
+Now we can specialize \texttt{read} using \texttt{equal} and \texttt{if constexpr}.
+\begin{verbatim}
+ 1  template<typename Type>
+ 2  void read(Type& var){
+ 3    if constexpr (equal<Type, std::string>){
+ 4      std::cin >> std::ws;
+ 5      getline(std::cin, var);
+ 6    }
+ 7    else{
+ 8      std::cin >> var;
+ 9    }
+10  }
+\end{verbatim}
+\end{frame}
+\section{Memory Management}
+\label{sec:orge5d502a}
+\begin{frame}[label={sec:org195e402},fragile]{Memory Management}
+ \begin{itemize}
+\item C uses \texttt{malloc} and \texttt{free} for dynamic allocation.
+\item Old C++ uses \texttt{new} and \texttt{delete}.
+\item Modern C++ uses smart pointers.
+\item We need to \texttt{\#include <memory>} to use them.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org2570950},fragile]{Memory Management}
+ When used in a proper manner:
+\begin{itemize}
+\item \texttt{unique\_ptr<Type>}: no other \texttt{unique\_ptr<Type>} shares its
+resource.
+\item \texttt{shared\_ptr<Type>}: other \texttt{shared\_ptr<Type>} may share its
+resource (reference counting).
+\item \texttt{weak\_ptr<Type>}: offers access to the (possibly dead) resource of
+a \texttt{shared\_ptr<Type>} (no reference counting).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org1ee7cda},fragile]{Memory Management}
+ Forget about \texttt{new}:
+\begin{itemize}
+\item \texttt{unique\_ptr<Type>}: \texttt{make\_unique<Type>(args...)}.
+\item \texttt{shared\_ptr<Type>}: initialize it with a moved \texttt{unique\_ptr<Type>}.
+\item \texttt{weak\_ptr<Type>}: initialize it with a \texttt{shared\_ptr<Type>}.
+\end{itemize}
+Forget about \texttt{delete}:
+\begin{itemize}
+\item \texttt{unique\_ptr<Type>}: when it dies or is assigned, resource is
+freed.
+\item \texttt{shared\_ptr<Type>}: a resource is freed when its last \texttt{shared\_ptr}
+is dead or assigned.
+\item \texttt{weak\_ptr<Type>}: unless locked, it does not prevent a resource
+from being freed (\texttt{lock} produces a \texttt{shared\_ptr} from a \texttt{weak\_ptr}).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org67822f2},fragile]{Memory Management}
+ \begin{verbatim}
+ 1  class A{
+ 2    // ...
+ 3  };
+ 4  
+ 5  // C style
+ 6  A* obj = malloc(sizeof(A));
+ 7  // obj still needs to be initialized
+ 8  free(obj);
+ 9  // Old C++ style (at least calls a constructor)
+10  A* obj = new A(...);
+11  delete obj;
+12  // C++11 style
+13  std::unique_ptr<A> obj{new A(...)};
+14  // deletion is automatic (end of scope)
+15  // C++14 style
+16  std::unique_ptr<A> obj{std::make_unique(...)}; // or
+17  auto obj{std::make_unique<A>(...)};
+18  // deletion is automatic (end of scope)
+19  // shared pointer
+20  std::shared_ptr<A> shared_obj{std::move(obj)};
+21  // deletion is automatic (reference counting)
+22  // weak pointer
+23  std::weak_ptr<A> weak_obj{obj};
+24  // weak_ptr cannot delete obj
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org59f1241},fragile]{Memory Management}
+ Allocating contiguous memory
+\begin{verbatim}
+ 1  class A{
+ 2    // ...
+ 3  };
+ 4  
+ 5  // C style stack memory (size already known)
+ 6  A arrA[100];
+ 7  
+ 8  // C style heap memory (size not known)
+ 9  int n = // ...
+10  A* arrA = malloc(n * sizeof(A));
+11  
+12  // C++ style stack memory
+13  std::array<A, 100> arrA{};
+14  
+15  // C++ style heap memory
+16  int n{...};
+17  std::vector<A> arrA{};
+18  arrA.reserve(n);
+\end{verbatim}
+\begin{itemize}
+\item GCC \texttt{push\_back} doubles \texttt{vector} capacity when it is full.
+\item \(n\) \texttt{push\_back} operations on empty \texttt{vector}:
+\begin{itemize}
+\item \(\frac{n}{2} + \frac{n}{4} + \dots + 1 = 2n - 1\);
+\item after \texttt{reserve(n)}, they cost \(n\).
+\end{itemize}
+\end{itemize}
+\end{frame}
+\section{Lambda Functions}
+\label{sec:org4d3705c}
+\begin{frame}[label={sec:org5674657},fragile]{Lambda Functions}
+ Anonymous functions.
+\begin{verbatim}
+ 1  const auto f{[](int& x) {x += 3;}};
+ 2  std::vector<int> vec{1, 2, 3, 4, 5};
+ 3  for (auto& e : vec){
+ 4    f(e);
+ 5  }
+ 6  // {4, 5, 6, 7, 8}
+ 7  int sum{0};
+ 8  const auto g{[&sum](int x) {sum += x;}};
+ 9  for (auto e : vec){
+10    g(e);
+11  }
+12  // sum == 30
+\end{verbatim}
+\end{frame}
+\section{Iterators}
+\label{sec:orgcc33bf6}
+\begin{frame}[label={sec:org7c34ac7},fragile]{Iterators}
+ Let's perform a traversal using a pointer.
+\begin{verbatim}
+ 1  // C style
+ 2  int arr[10];
+ 3  
+ 4  int* begin = arr;
+ 5  int* end = arr + 10; // pointer arithmetic: arr + sizeof(int) * 10
+ 6  
+ 7  int* it;
+ 8  for(it = begin; it != end; ++it){
+ 9    // do something with *it
+10    *it += 3;
+11  }
+\end{verbatim}
+Iterators provide a high level pointer arithmetic abstraction.
+\end{frame}
+\begin{frame}[label={sec:org322d9a7},fragile]{Iterators}
+ We use \texttt{std::begin} and \texttt{std::end} to control a traversal.
+\begin{verbatim}
+1  template<typename Collection>
+2  void increment_all(Collection& col){
+3    for (auto it{std::begin(col)}; it != std::end(col); ++it){
+4      *it = *it + 1;
+5    }
+6  }
+\end{verbatim}
+\texttt{increment\_all} can be used with any container that provides iterators.
+\begin{verbatim}
+1  std::array<int, 5> arr{1, 2, 3, 4, 5};
+2  increment_all(arr); // {2, 3, 4, 5, 6}
+3  std::vector<int> vec{1, 2, 3, 4, 5};
+4  increment_all(vec); // {2, 3, 4, 5, 6}
+5  std::string str{"apple"};
+6  increment_all(str); // "bqqmf"
+7  // ugly C arrays
+8  int ugly[5]{1, 2, 3, 4, 5};
+9  increment_all(ugly); // {2, 3, 4, 5, 6}
+\end{verbatim}
+Also works with \texttt{std::list}, \texttt{std::deque} and some others.
+\end{frame}
+\begin{frame}[label={sec:orgb79c1f9},fragile]{Iterators}
+ Another example.
+\begin{verbatim}
+ 1  template<typename Iterator, typename Function>
+ 2  void apply_to(Iterator begin, Iterator end, Function f){
+ 3    for (auto it{begin}; it != end; ++it){
+ 4      *it = f(*it);
+ 5    }
+ 6  }
+ 7  
+ 8  std::array<int, 5> arr{1, 2, 3, 4, 5};
+ 9  apply_to(std::begin(arr) + 1, std::begin(arr) + 3,
+10           [](int x) {return x + 3;});
+11  // {1, 5, 6, 4, 5}
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org77d993c},fragile]{Iterators}
+ Template variables love lambda functions.
+\begin{verbatim}
+1  template<typename Type, Type t>
+2  constexpr const auto add{[](Type x) {return x + t;}};
+3  
+4  std::array<int, 5> arr{1, 2, 3, 4, 5};
+5  apply_to(std::begin(arr) + 2, std::end(arr), add<int, 5>);
+6  // {1, 2, 8, 9, 10}
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:orgb1a5ca7},fragile]{Iterators}
+ \begin{center}
+\begin{tabular}{lll}
+\texttt{std::} & Read-only & Reverse\\
+\hline
+\texttt{begin}, \texttt{end} & no & no\\
+\texttt{cbegin}, \texttt{cend} & yes & no\\
+\texttt{rbegin}, \texttt{rend} & no & yes\\
+\texttt{crbegin}, \texttt{crend} & yes & yes\\
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item Read about iterator adaptors.
+\begin{itemize}
+\item We are going to use \texttt{back\_inserter} here.
+\end{itemize}
+\item Why bother with iterators?
+\begin{itemize}
+\item generic algorithms; STL.
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:orge94ca67},fragile]{Iterators}
+ Example of a (silly) iterator adaptor.
+\begin{verbatim}
+ 1  template<typename Collection>
+ 2  class Reverse{
+ 3    Collection& col_;
+ 4  public:
+ 5    Reverse(Collection& col) : col_{col} {}
+ 6    using iterator          = typename Collection::reverse_iterator;
+ 7    using traits            = std::iterator_traits<iterator>;
+ 8    using difference_type   = typename traits::difference_type;
+ 9    using value_type        = typename traits::value_type;
+10    using reference         = typename traits::reference;
+11    using pointer           = typename traits::pointer;
+12    using iterator_category = typename traits::iterator_category;
+13    iterator begin() {return std::rbegin(col_);}
+14    iterator end()   {return std::rend(col_);}
+15  };
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:orgdb8a5e8},fragile]{Iterators}
+ \begin{verbatim}
+ 1  template<typename Type>
+ 2  class Range{
+ 3    Type from_, to_, step_;
+ 4  public:
+ 5    Range(Type from, Type to, Type step) : from_{from}, to_{to}, step_{step} {}
+ 6    Range(Type from, Type to) : Range{from, to, 1} {}
+ 7    struct iterator{
+ 8      Type x_; Range& parent_;
+ 9      using difference_type = Type; using value_type = Type;
+10      using reference = Type&; using pointer = Type*;
+11      using iterator_category = std::input_iterator_tag;
+12      iterator(Type x, Range& parent) : x_{x}, parent_{parent} {}
+13      bool operator!=(const iterator& it) { return x_ != it.x_;}
+14      bool operator==(const iterator& it) {return x_ == it.x_;}
+15      reference operator*() {return x_;}
+16      difference_type operator-(const iterator& it) {return x_ - it.x_;}
+17      iterator& operator++(){
+18        Type next{x_ + parent_.step_}, to{parent_.to_};
+19        x_ = next < to ? possible_step : to;
+20        return *this;
+21      }
+22    };
+23    iterator begin() {return iterator{from_, *this};}
+24    iterator end() {return iterator{to_, *this};}
+25  };
+\end{verbatim}
+\end{frame}
+\section{Standard Template Library}
+\label{sec:org7395937}
+\begin{frame}[label={sec:org35749c9}]{Standard Tenplate Library}
+\begin{itemize}
+\item C++ Standard Library.
+\item Containers, algorithms and other facilities.
+\begin{itemize}
+\item General interfaces, some specialized implementations.
+\end{itemize}
+\item Let's see some of them by example.
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:orgaacebae},fragile]{Standard Template Library}
+ \begin{verbatim}
+ 1  #include <algorithm>
+ 2  
+ 3  template<typename Type>
+ 4  constexpr const auto is_odd{[](Type x) {return x % 2 == 1;}};
+ 5  
+ 6  template<typename Type, Type ub>
+ 7  constexpr const auto leq{[](Type x) {return x <= ub;}};
+ 8  
+ 9  std::vector<int> vec{1, 3, 5, 7, 9};
+10  std::all_of(std::cbegin(vec), std::cend(vec), is_odd<int>); // 1
+11  std::vector<int> vec{1, 3, 6, 7, 9};
+12  std::all_of(std::cbegin(vec), std::cend(vec), is_odd<int>); // 0
+13  
+14  std::any_of(std::cbegin(vec), std::cend(vec), leq<int, 1>); // 1
+15  std::any_of(std::cbegin(vec), std::cend(vec), leq<int, 0>); // 0
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org1641f89},fragile]{Standard Template Library}
+ \begin{verbatim}
+ 1  #include <algorithm>
+ 2  
+ 3  template<typename Type>
+ 4  class Leq{
+ 5    Type ub_;
+ 6  public:
+ 7    Leq(Type ub) : ub_{ub} {}
+ 8    bool operator()(Type x){
+ 9      return x <= ub_;
+10    }
+11  };
+12  
+13  int n{1};
+14  std::any_of(std::cbegin(vec), std::cend(vec), Leq{n}); // 1
+15  n = 0;
+16  std::any_of(std::cbegin(vec), std::cend(vec), Leq{n}); // 0
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org6801dfe},fragile]{Standard Template Library}
+ \texttt{\#include <algorithm>}
+\begin{center}
+\begin{tabular}{ll}
+Function & Description\\
+\hline
+\texttt{none\_of} & 1 iff no element of iterator range satisfies predicate\\
+\texttt{for\_each} & applies function to each element of iterator range\\
+\texttt{find} & iterator to first occurrence of element in range\\
+\texttt{find\_if} & first element of range satisfying predicate\\
+\texttt{find\_end} & searches \texttt{range1} for last occurrence of \texttt{range2}\\
+\texttt{find\_first\_of} & first element in \texttt{range1} occurring in \texttt{range2}\\
+\texttt{adjacent\_find} & first adjacent elements satisfying binary predicate\\
+\texttt{count} & number of occurrences of element in range\\
+\texttt{count\_if} & number of elements in range satisfying predicate\\
+\texttt{mismatch} & pair of first mismatching positions of ranges\\
+\texttt{equal} & 1 iff two ranges are equal\\
+\texttt{is\_permutation} & 1 iff \texttt{range1} is permutation of \texttt{range2}\\
+\texttt{search} & searches \texttt{range1} for first occurrence of \texttt{range2}\\
+\end{tabular}
+\end{center}
+\end{frame}
+\begin{frame}[label={sec:orgfd326c7},fragile]{Standard Template Library}
+ \begin{verbatim}
+ 1  std::vector<int> vec1{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+ 2  std::vector<int> vec2{10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+ 3  
+ 4  std::count_if(std::cbegin(vec1), std::cend(vec1), is_odd<int>); // 5
+ 5  
+ 6  auto begin1{std::cbegin(vec1)};
+ 7  auto end1{std::cend(vec1)};
+ 8  auto begin2{std::cbegin(vec2)};
+ 9  auto end2{std::cend(vec2)};
+10  
+11  std::distance(begin1, end1) == std::distance(begin2, end2) &&
+12    std::is_permutation(begin1, end1, begin2);  // 1
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org5c5e421},fragile]{Standard Template Library}
+ \begin{verbatim}
+ 1  bool is_prime(unsigned x){
+ 2    if (x == 1){
+ 3      return false;
+ 4    }
+ 5    if (x == 2 || x == 3){
+ 6      return true;
+ 7    }
+ 8    if (x % 2 == 0){
+ 9      return false;
+10    }
+11    else{
+12      unsigned ub{static_cast<unsigned>(floor(sqrt(x)))};
+13      Range<unsigned> divisor_candidates{3, ub + 1, 2};
+14  
+15      return std::none_of(std::cbegin(divisor_candidates),
+16                         std::cend(divisor_candidates),
+17                         [x](unsigned d) {return x % d == 0;});
+18    }
+19  }
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org6be59cf},fragile]{Standard Template Library}
+ \begin{center}
+\begin{tabular}{ll}
+Function & Description\\
+\hline
+\texttt{copy} & copies range to output iterator\\
+\texttt{copy\_if} & copies range elements satisfying predicate to output\\
+\texttt{swap} & exchanges contents of objects\\
+\texttt{swap\_ranges} & applies \texttt{swap} to two ranges\\
+\texttt{transform} & operator applied to one (two) range(s) goes to output\\
+\texttt{replace} & overwrites \texttt{value1} with \texttt{value2} in range\\
+\texttt{replace\_if} & assigns value to elements of range satisfying predicate\\
+\texttt{generate} & fills range with return values of function\\
+\texttt{remove} & removes value from range\\
+\texttt{remove\_if} & removes elements from range satisfying predicate\\
+\texttt{unique} & removes consecutive duplicates from range\\
+\end{tabular}
+\end{center}
+Note: \texttt{remove} and \texttt{remove\_if} do not realloacte memory.
+\end{frame}
+\begin{frame}[label={sec:org31dd10d},fragile]{Standard Template Library}
+ \begin{verbatim}
+ 1  std::vector<int> vec{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+ 2  
+ 3  // this does not alter vec capacity
+ 4  auto new_end{std::remove_if(std::begin(vec), std::end(vec), is_prime)};
+ 5  // now, vec.erase(new_end, std::end(vec)) would alter vec capacity
+ 6  
+ 7  std::vector<int> vec2{};
+ 8  vec2.reserve(std::distance(std::begin(vec), new_end));
+ 9  
+10  std::copy(std::begin(vec), new_end, std::back_inserter(vec2));
+11  
+12  for (auto e : Reverse{vec2}){
+13    std::cout << e << ' ';
+14  }
+15  // 10 9 8 6 4 1 
+\end{verbatim}
+\end{frame}
+\begin{frame}[label={sec:org56751b4},fragile]{Standard Template Library}
+ \texttt{<algorithm>} also has functions related to:
+\begin{itemize}
+\item partition;
+\item sorting;
+\item binary search (on sorted ranges);
+\item merging (of sorted ranges);
+\item heap adaptors;
+\item minimum and maximum values;
+\end{itemize}
+Also take a look at:
+\begin{itemize}
+\item containers: \texttt{<set>}, \texttt{<map>}, \texttt{<bitset>};
+\item container adaptors: \texttt{<stack>}, \texttt{<queue>};
+\item utilities: \texttt{<optional>}, \texttt{<functional>}, \texttt{<tuple>}, \texttt{<type\_traits>}.
+\end{itemize}
+\end{frame}
+\section{Further Reading}
+\label{sec:org6f5532e}
+\begin{frame}[label={sec:org2b7cebe}]{Further Reading}
+\begin{itemize}
+\item A Tour of C++, by Bjarne Stroustrup.
+\item C++ Core Guidelines (\href{https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines}{link}), by Bjarne Stroustrup and Herb Sutter.
+\item C++17 STL Cookbook, by Jacek Galowicz.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org31c6ee1}]{Thank you}
+\begin{center}
+\Huge{Thank you!}
+\end{center}
+\end{frame}
+\end{document}

@@ -78,7 +78,7 @@ Você pode visitar o repositorio desse site [[https://github.com/luizalbertocvia
    - semestres: 2017.2
 ** Matemática Computacional
    - semestres: 2017.1, 2018.1, 2019.1, 2020.1
-   - notas de aula: [[file:mc/notas.pdf][pdf]] [[file:mc/notas.tex][tex]]
+   - notas de aula: [[file:mc-lecture-notes/notas.pdf][pdf]] [[file:mc-lecture-notes/notas.tex][tex]]
 ** Matemática Discreta
    - semestres: 2016.2
 ** Programação Funcional

@@ -1,3 +1,6 @@
 [submodule "org-html-themes"]
 	path = org-html-themes
 	url = https://github.com/fniessen/org-html-themes
+[submodule "mc-lecture-notes"]
+	path = mc-lecture-notes
+	url = https://github.com/luiz-classrooms/mc-lecture-notes

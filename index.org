@@ -3,28 +3,30 @@
 
 #+setupfile: org-html-themes/setup/theme-bigblow-local.setup
 
-Professor da Universidade Federal do Ceará, no Campus de Crateús,
-lecionando principalmente no curso de Ciência da Computação.
+Professor and researcher at Federal University of Ceará, Crateús
+campus. I am lecturing mainly in the Computer Science graduation
+course.
 
-Você pode consultar meu Lattes em http://lattes.cnpq.br/2028165237751191
+You can view my Lattes curriculum at http://lattes.cnpq.br/2028165237751191
 
-Você pode visitar o repositorio deste site [[https://github.com/luizalbertocviana/luizalbertocviana.github.io][aqui]].
+You can visit this site's repository [[https://github.com/luizalbertocviana/luizalbertocviana.github.io][here]].
 
-* Contato
-  - Email pessoal: [[mailto:luizalbertocviana@gmail.com][luizalbertocviana@gmail.com]]
-  - Email profissional: [[mailto:luizalberto@crateus.ufc.br][luizalberto@crateus.ufc.br]]
+* Contact
+  - Personal email: [[mailto:luizalbertocviana@gmail.com][luizalbertocviana@gmail.com]]
+  - Professional email: [[mailto:luizalberto@crateus.ufc.br][luizalberto@crateus.ufc.br]]
   - Github: https://github.com/luizalbertocviana
-* Artigos
+  - LinkedIn: https://www.linkedin.com/in/luiz-alberto-430b5239
+* Articles
 ** 2017
   - *CSBC* The Least-Dependency Constrained Spanning Tree Problem
     ([[manoel]]) [[http://csbc2017.mackenzie.br/public/files/all/anais-csbc-2017.pdf][link]]
   - *SBPO* Two Dependency Constrained Spanning Tree Problems ([[manoel]])
     [[http://www.sbpo2017.iltc.br/pdf/168962.pdf][link]]
 ** 2019
-  - *SBPO* Um Algoritmo Exato para o Problema da Biclique Induzida
+  - *SBPO* (Portuguese) Um Algoritmo Exato para o Problema da Biclique Induzida
     Balanceada Máxima com Partições em Cliques e Bonecas Russas
     ([[marcus]], [[rennan]]) [[https://proceedings.science/proceedings/100090/_papers/106757/download/abstract_file2?lang=pt-br][link]]
-  - *SBPO* Uma Abordagem Híbrida Exata-Heurística Aplicada ao Problema
+  - *SBPO* (Portuguese) Uma Abordagem Híbrida Exata-Heurística Aplicada ao Problema
     do Ciclo Mediano sem Restrições de Capacidade ([[paulo]], [[lisieux]])
     [[https://proceedings.science/proceedings/100090/_papers/106758/download/abstract_file2?lang=pt-br][link]]
   - *ENTCS* The Generalized Dependency Constrained Spanning Tree
@@ -32,59 +34,59 @@ Você pode visitar o repositorio deste site [[https://github.com/luizalbertocvia
 ** 2020
    - *ITOR* Two Dependency Constrained Spanning Tree Problems ([[manoel]])
      [[https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12690][link]]
-* Outros trabalhos
-** Resumos Estendidos e Pôsteres
-   - *SBPO 2019* Um Modelo de Programação Inteira Aplicado ao Problema
+* Other Works
+** Extended Abstracts and Posters
+   - *SBPO 2019* (Portuguese) Um Modelo de Programação Inteira Aplicado ao Problema
      de Alocação de Salas da Universidade Federal do Ceará - Campus
      Crateús ([[bruno]], [[lisieux]]) [[https://proceedings.science/proceedings/100090/_papers/106943/download/abstract_file2?lang=pt-br][link]]
-** Repositórios
-   - [[https://github.com/luizalbertocviana/cracking-coding-problems][cracking-coding-problems]] contém soluções para os problemas
-     propostos pelo livro Cracking the Coding Interview, em C++.
-   - [[https://github.com/luizalbertocviana/data-structures-cpp][data-structures-cpp]] é uma coleção de estruturas de dados
-     clássicas, implementadas em C++ com fins didáticos.
-   - [[https://github.com/luizalbertocviana/dotfiles][dotfiles]] contém o setup do meu ambiente de trabalho. Destaque
-     para as configurações do Emacs e i3wm.
-   - [[https://github.com/luizalbertocviana/lisp-experiments][lisp-experiments]] é uma coleção de códigos-fonte escritos em
-     Common Lisp. Genérico, com o propósito de aprender a linguagem.
+** Repositories
+   - [[https://github.com/luizalbertocviana/cracking-coding-problems][cracking-coding-problems]] contains C++ solutions to the problems
+     presented in the Cracking the Coding Interview book.
+   - [[https://github.com/luizalbertocviana/data-structures-cpp][data-structures-cpp]] is a collection of classic data structures
+     implemented in C++ for didatic purposes.
+   - [[https://github.com/luizalbertocviana/dotfiles][dotfiles]] contais my work environment setup. Highlight for Emacs,
+     vim and i3wm setup.
+   - [[https://github.com/luizalbertocviana/lisp-experiments][lisp-experiments]] is a collection of Common Lisp source code I
+     have written to learn the language.
 ** Slides
-   - Uma apresentação sobre C++ moderno: [[file:slides/cpp.pdf][pdf]] [[file:slides/cpp.tex][tex]]
-* Orientações de graduação
+   - A talk on modern C++: [[file:slides/cpp.pdf][pdf]] [[file:slides/cpp.tex][tex]]
+* Undergraduate Tutoring
   - Bruno Teixeira de Sousa ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/48318][link]]
   - João Paulo de Araújo ([[rennan]]) [[http://repositorio.ufc.br/handle/riufc/43969][link]]
   - Marcus Vinícius Martins Melo ([[rennan]]) [[http://repositorio.ufc.br/handle/riufc/43970][link]]
   - Paulo Henrique Sousa de Araújo ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/49078][link]]
-* Colaboradores
-** Docentes
+* Collaborators
+** Teachers
   1. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
   2. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
   3. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
-** Discentes
+** Students
   1. <<bruno>> Bruno Teixeira de Sousa [[http://lattes.cnpq.br/5987909872617550][Lattes]]
   2. <<alex>> Francisco Alex Sousa Anchieta [[http://lattes.cnpq.br/2903943249633436][Lattes]]
   3. <<marcus>> Marcus Vinícius Martins Melo [[http://lattes.cnpq.br/6091624045920112][Lattes]]
   4. <<paulo>> Paulo Henrique Sousa de Araújo [[http://lattes.cnpq.br/6182698151198285][Lattes]]
-* Disciplinas
-** Álgebra Linear
-   - semestres: 2018.2
-** Estrutura de Dados
-   - semestres: 2016.2, 2018.2
-   - notas de aula gentilmente cedidas por [[alex]]: [[file:ed/document.pdf][pdf]] 
-** Estrutura de Dados Avançada
-   - semestres: 2020.1
-   - notas de aula: [[https://github.com/luiz-classrooms/eda-lecture-notes][repsitório]]
-** Linguagens Formais e Autômatos
-   - semestres: 2018.2, 2019.2
-** Matemática Básica
-   - semestres: 2017.2
-** Matemática Computacional
-   - semestres: 2017.1, 2018.1, 2019.1, 2020.1
-   - notas de aula: [[https://github.com/luiz-classrooms/mc-lecture-notes][repositório]]
-** Matemática Discreta
-   - semestres: 2016.2
-** Programação Funcional
-   - semestres: 2017.1, 2018.1, 2019.1
-   - notas de aula: [[https://github.com/luiz-classrooms/pf-lecture-notes][repositório]]
-** Projeto e Análise de Algoritmos
-   - semestres: 2019.2
-** Teoria da Computação
-   - semestres: 2017.2, 2018.2
+* Undergraduate Disciplines
+** Linear Algebra
+   - semester: 2018.2
+** Data Structures
+   - semester: 2016.2, 2018.2
+   - lecture notes (in Portuguese) kindly provided by [[alex]]: [[file:ed/document.pdf][pdf]] 
+** Advanced Data Structures
+   - semester: 2020.1
+   - lecture notes (in Portuguese): [[https://github.com/luiz-classrooms/eda-lecture-notes][repsitory]]
+** Automata and Formal Languages
+   - semester: 2018.2, 2019.2
+** Introduction to Discrete Mathematics
+   - semester: 2017.2
+** Computational Mathematics
+   - semester: 2017.1, 2018.1, 2019.1, 2020.1
+   - lecture notes (in Portuguese): [[https://github.com/luiz-classrooms/mc-lecture-notes][repository]]
+** Discrete Mathematics
+   - semester: 2016.2
+** Functional Programming
+   - semester: 2017.1, 2018.1, 2019.1
+   - lecture notes (in Portuguese): [[https://github.com/luiz-classrooms/pf-lecture-notes][repository]]
+** Algorithm Design and Analysis
+   - semester: 2019.2
+** Theory of Computation
+   - semester: 2017.2, 2018.2

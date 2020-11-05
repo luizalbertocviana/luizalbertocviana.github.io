@@ -4,8 +4,8 @@
 #+setupfile: org-html-themes/setup/theme-bigblow-local.setup
 
 Professor and researcher at Federal University of Ceará, Crateús
-campus. I am lecturing mainly in the Computer Science graduation
-course.
+Campus. I am lecturing mainly in the Computer Science Graduation
+Course.
 
 You can view my Lattes curriculum at http://lattes.cnpq.br/2028165237751191
 

@@ -56,7 +56,7 @@ You can visit this site's repository [[https://github.com/luizalbertocviana/luiz
   - Marcus Vinícius Martins Melo ([[rennan]]) [[http://repositorio.ufc.br/handle/riufc/43970][link]]
   - Paulo Henrique Sousa de Araújo ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/49078][link]]
 * Collaborators
-** Teachers
+** Professors
   1. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
   2. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
   3. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
@@ -68,12 +68,15 @@ You can visit this site's repository [[https://github.com/luizalbertocviana/luiz
 * Undergraduate Disciplines
 ** Linear Algebra
    - semester: 2018.2
+   - video playlist (in Portuguese) on Abstract Algebra at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_bslqqkwYQHqRx_cPu4dfDaX][youtube]]
 ** Data Structures
    - semester: 2016.2, 2018.2
-   - lecture notes (in Portuguese) kindly provided by [[alex]]: [[file:ed/document.pdf][pdf]] 
+   - lecture notes (in Portuguese) kindly provided by [[alex]]: [[file:ed/document.pdf][pdf]]
+   - video playlist (in Portuguese) at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_btEpfhW7T9Sw-H2g3rihi-I][youtube]]
 ** Advanced Data Structures
    - semester: 2020.1
    - lecture notes (in Portuguese): [[https://github.com/luiz-classrooms/eda-lecture-notes][repsitory]]
+   - video playlist (in Portuguese) at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_btEpfhW7T9Sw-H2g3rihi-I][youtube]]
 ** Automata and Formal Languages
    - semester: 2018.2, 2019.2
 ** Introduction to Discrete Mathematics
@@ -81,12 +84,17 @@ You can visit this site's repository [[https://github.com/luizalbertocviana/luiz
 ** Computational Mathematics
    - semester: 2017.1, 2018.1, 2019.1, 2020.1
    - lecture notes (in Portuguese): [[https://github.com/luiz-classrooms/mc-lecture-notes][repository]]
+   - video playlist (in Portuguese) at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_bu6YaDX-AwqmGmr9BhVx_Zr][youtube]]
 ** Discrete Mathematics
    - semester: 2016.2
 ** Functional Programming
-   - semester: 2017.1, 2018.1, 2019.1
+   - semester: 2017.1, 2018.1, 2019.1, 2020.2
    - lecture notes (in Portuguese): [[https://github.com/luiz-classrooms/pf-lecture-notes][repository]]
+   - video playlist (in Portuguese) at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_bt2iFyeOYttbswIwbQNbMSM][youtube]]
 ** Algorithm Design and Analysis
-   - semester: 2019.2
+   - semester: 2019.2, 2020.2
+   - video playlist (in Portuguese) at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_buAXDjLZl32FpSbsVZJ8OZH][youtube]]
+   - video playlist (in Portuguese) of some sorting algorithms
+     implemented in C++ at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_btDoim_kxpenbusvTbxZ9ub][youtube]]
 ** Theory of Computation
    - semester: 2017.2, 2018.2

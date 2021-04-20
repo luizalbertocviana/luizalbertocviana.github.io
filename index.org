@@ -60,8 +60,8 @@ You can visit this site's repository [[https://github.com/luizalbertocviana/luiz
   - Paulo Henrique Sousa de Araújo ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/49078][link]]
 * Collaborators
 ** Professors
-  1. <<shirley>> Ana Shirley Ferreira da Silva [[http://lattes.cnpq.br/2132614695901416][lattes]]
-  2. <<ignasi>> Ignasi Sau [[http://orcid.org/0000-0002-8981-9287][orcid]]
+  1. <<shirley>> Ana Shirley Ferreira da Silva [[http://lattes.cnpq.br/2132614695901416][Lattes]]
+  2. <<ignasi>> Ignasi Sau [[http://orcid.org/0000-0002-8981-9287][Orcid]]
   3. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
   4. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
   5. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]

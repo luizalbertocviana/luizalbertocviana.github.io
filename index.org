@@ -34,6 +34,9 @@ You can visit this site's repository [[https://github.com/luizalbertocviana/luiz
 ** 2020
    - *ITOR* Two Dependency Constrained Spanning Tree Problems ([[manoel]])
      [[https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12690][link]]
+** 2021
+   - *JOCO* A unifying model for locally constrained spanning tree
+     problems ([[manoel]], [[ignasi]], [[shirley]]) [[https://link.springer.com/article/10.1007/s10878-021-00740-2][link]]
 * Other Works
 ** Extended Abstracts and Posters
    - *SBPO 2019* (Portuguese) Um Modelo de Programação Inteira Aplicado ao Problema
@@ -57,9 +60,11 @@ You can visit this site's repository [[https://github.com/luizalbertocviana/luiz
   - Paulo Henrique Sousa de Araújo ([[lisieux]]) [[http://repositorio.ufc.br/handle/riufc/49078][link]]
 * Collaborators
 ** Professors
-  1. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
-  2. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
-  3. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
+  1. <<shirley>> Ana Shirley Ferreira da Silva [[http://lattes.cnpq.br/2132614695901416][lattes]]
+  2. <<ignasi>> Ignasi Sau [[http://orcid.org/0000-0002-8981-9287][orcid]]
+  3. <<lisieux>> Lisieux Marie Marinho dos Santos Andrade [[http://lattes.cnpq.br/8824525263721786][Lattes]]
+  4. <<manoel>> Manoel Bezerra Campêlo Neto [[http://lattes.cnpq.br/7207626266770213][Lattes]]
+  5. <<rennan>> Rennan Ferreira Dantas [[http://lattes.cnpq.br/0192579272041443][Lattes]]
 ** Students
   1. <<bruno>> Bruno Teixeira de Sousa [[http://lattes.cnpq.br/5987909872617550][Lattes]]
   2. <<alex>> Francisco Alex Sousa Anchieta [[http://lattes.cnpq.br/2903943249633436][Lattes]]

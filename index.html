@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-20 ter 16:24 -->
+<!-- 2021-10-27 qua 20:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Luiz Alberto do Carmo Viana</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Luiz Alberto do Carmo Viana" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +42,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -191,7 +192,6 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
@@ -204,71 +204,52 @@
 <script type="text/javascript" src="styles/bigblow/js/bigblow.js"></script>
 <script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
 <script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Luiz Alberto do Carmo Viana</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org32dfa49">1. Contact</a></li>
-<li><a href="#org3bae784">2. Articles</a>
+<li><a href="#org9f1444a">1. Contact</a></li>
+<li><a href="#org161a5d1">2. Articles</a>
 <ul>
-<li><a href="#org8a99c65">2.1. 2017</a></li>
-<li><a href="#org07c97e1">2.2. 2019</a></li>
-<li><a href="#org975eb65">2.3. 2020</a></li>
-<li><a href="#orgd7aa41b">2.4. 2021</a></li>
+<li><a href="#org107a94d">2.1. 2017</a></li>
+<li><a href="#org1743787">2.2. 2019</a></li>
+<li><a href="#orgd44772d">2.3. 2020</a></li>
+<li><a href="#org315ee0f">2.4. 2021</a></li>
 </ul>
 </li>
-<li><a href="#orgdafb21d">3. Other Works</a>
+<li><a href="#org936677c">3. Other Works</a>
 <ul>
-<li><a href="#org4a70c0b">3.1. Extended Abstracts and Posters</a></li>
-<li><a href="#org5c50687">3.2. Repositories</a></li>
-<li><a href="#orgcecdb95">3.3. Slides</a></li>
+<li><a href="#orgb70f0b5">3.1. Extended Abstracts and Posters</a></li>
+<li><a href="#org663e13e">3.2. Repositories</a></li>
+<li><a href="#org20242f4">3.3. Slides</a></li>
 </ul>
 </li>
-<li><a href="#org52d47ee">4. Undergraduate Tutoring</a></li>
-<li><a href="#orgba07f59">5. Collaborators</a>
+<li><a href="#org830a77d">4. Undergraduate Tutoring</a></li>
+<li><a href="#orgd5090f5">5. Collaborators</a>
 <ul>
-<li><a href="#org6b0008c">5.1. Professors</a></li>
-<li><a href="#org844ff8e">5.2. Students</a></li>
+<li><a href="#org7ade9a1">5.1. Professors</a></li>
+<li><a href="#orgc3c34b4">5.2. Students</a></li>
 </ul>
 </li>
-<li><a href="#org0cba916">6. Undergraduate Disciplines</a>
+<li><a href="#orgf6e65ea">6. Undergraduate Disciplines</a>
 <ul>
-<li><a href="#orgae323e5">6.1. Linear Algebra</a></li>
-<li><a href="#org1ff92fc">6.2. Data Structures</a></li>
-<li><a href="#org401cb5f">6.3. Advanced Data Structures</a></li>
-<li><a href="#org2d494a8">6.4. Automata and Formal Languages</a></li>
-<li><a href="#org06a5538">6.5. Introduction to Discrete Mathematics</a></li>
-<li><a href="#orgf165401">6.6. Computational Mathematics</a></li>
-<li><a href="#org6949acd">6.7. Discrete Mathematics</a></li>
-<li><a href="#org7ffbcc1">6.8. Functional Programming</a></li>
-<li><a href="#org9517bdb">6.9. Algorithm Design and Analysis</a></li>
-<li><a href="#orgfd13b79">6.10. Theory of Computation</a></li>
+<li><a href="#org1bef75b">6.1. Linear Algebra</a></li>
+<li><a href="#org370ff83">6.2. Data Structures</a></li>
+<li><a href="#orgcb2e036">6.3. Advanced Data Structures</a></li>
+<li><a href="#org8cd2f67">6.4. Automata and Formal Languages</a></li>
+<li><a href="#orge1a6860">6.5. Introduction to Discrete Mathematics</a></li>
+<li><a href="#orgddd2c4f">6.6. Computational Mathematics</a></li>
+<li><a href="#org341f17a">6.7. Numerical Calculus</a></li>
+<li><a href="#org496ae37">6.8. Operations Research</a></li>
+<li><a href="#org29a5964">6.9. Discrete Mathematics</a></li>
+<li><a href="#org797fd0d">6.10. Functional Programming</a></li>
+<li><a href="#org7876d72">6.11. Algorithm Design and Analysis</a></li>
+<li><a href="#org559e753">6.12. Graph Algorithms</a></li>
+<li><a href="#orgbc6e8c4">6.13. Theory of Computation</a></li>
 </ul>
 </li>
 </ul>
@@ -288,8 +269,8 @@ You can view my Lattes curriculum at <a href="http://lattes.cnpq.br/202816523775
 You can visit this site's repository <a href="https://github.com/luizalbertocviana/luizalbertocviana.github.io">here</a>.
 </p>
 
-<div id="outline-container-org32dfa49" class="outline-2">
-<h2 id="org32dfa49"><span class="section-number-2">1</span> Contact</h2>
+<div id="outline-container-org9f1444a" class="outline-2">
+<h2 id="org9f1444a"><span class="section-number-2">1.</span> Contact</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Personal email: <a href="mailto:luizalbertocviana@gmail.com">luizalbertocviana@gmail.com</a></li>
@@ -299,71 +280,71 @@ You can visit this site's repository <a href="https://github.com/luizalbertocvia
 </ul>
 </div>
 </div>
-<div id="outline-container-org3bae784" class="outline-2">
-<h2 id="org3bae784"><span class="section-number-2">2</span> Articles</h2>
+<div id="outline-container-org161a5d1" class="outline-2">
+<h2 id="org161a5d1"><span class="section-number-2">2.</span> Articles</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org8a99c65" class="outline-3">
-<h3 id="org8a99c65"><span class="section-number-3">2.1</span> 2017</h3>
+<div id="outline-container-org107a94d" class="outline-3">
+<h3 id="org107a94d"><span class="section-number-3">2.1.</span> 2017</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li><b>CSBC</b> The Least-Dependency Constrained Spanning Tree Problem
-(<a href="#org0436c10">4</a>) <a href="http://csbc2017.mackenzie.br/public/files/all/anais-csbc-2017.pdf">link</a></li>
-<li><b>SBPO</b> Two Dependency Constrained Spanning Tree Problems (<a href="#org0436c10">4</a>)
+(<a href="#org4b1b600">4</a>) <a href="http://csbc2017.mackenzie.br/public/files/all/anais-csbc-2017.pdf">link</a></li>
+<li><b>SBPO</b> Two Dependency Constrained Spanning Tree Problems (<a href="#org4b1b600">4</a>)
 <a href="http://www.sbpo2017.iltc.br/pdf/168962.pdf">link</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org07c97e1" class="outline-3">
-<h3 id="org07c97e1"><span class="section-number-3">2.2</span> 2019</h3>
+<div id="outline-container-org1743787" class="outline-3">
+<h3 id="org1743787"><span class="section-number-3">2.2.</span> 2019</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li><b>SBPO</b> (Portuguese) Um Algoritmo Exato para o Problema da Biclique Induzida
 Balanceada Máxima com Partições em Cliques e Bonecas Russas
-(<a href="#org82f840a">3</a>, <a href="#org99f4acf">5</a>) <a href="https://proceedings.science/proceedings/100090/_papers/106757/download/abstract_file2?lang=pt-br">link</a></li>
+(<a href="#orgcef7125">3</a>, <a href="#org430458c">5</a>) <a href="https://proceedings.science/proceedings/100090/_papers/106757/download/abstract_file2?lang=pt-br">link</a></li>
 <li><b>SBPO</b> (Portuguese) Uma Abordagem Híbrida Exata-Heurística Aplicada ao Problema
-do Ciclo Mediano sem Restrições de Capacidade (<a href="#org7c5fb26">4</a>, <a href="#org53c8e80">3</a>)
+do Ciclo Mediano sem Restrições de Capacidade (<a href="#org6b32138">4</a>, <a href="#org886f406">3</a>)
 <a href="https://proceedings.science/proceedings/100090/_papers/106758/download/abstract_file2?lang=pt-br">link</a></li>
 <li><b>ENTCS</b> The Generalized Dependency Constrained Spanning Tree
-Problem (<a href="#org0436c10">4</a>) <a href="https://reader.elsevier.com/reader/sd/pii/S1571066119301136?token=5C49470DC0048D2D2C2B3AD4828CCBA66C7AE52E3FEA38F89E30BA45D83DFBCDCF87FE5A8D40B9439009536BC62A65D4">link</a></li>
+Problem (<a href="#org4b1b600">4</a>) <a href="https://reader.elsevier.com/reader/sd/pii/S1571066119301136?token=5C49470DC0048D2D2C2B3AD4828CCBA66C7AE52E3FEA38F89E30BA45D83DFBCDCF87FE5A8D40B9439009536BC62A65D4">link</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org975eb65" class="outline-3">
-<h3 id="org975eb65"><span class="section-number-3">2.3</span> 2020</h3>
+<div id="outline-container-orgd44772d" class="outline-3">
+<h3 id="orgd44772d"><span class="section-number-3">2.3.</span> 2020</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
-<li><b>ITOR</b> Two Dependency Constrained Spanning Tree Problems (<a href="#org0436c10">4</a>)
+<li><b>ITOR</b> Two Dependency Constrained Spanning Tree Problems (<a href="#org4b1b600">4</a>)
 <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12690">link</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd7aa41b" class="outline-3">
-<h3 id="orgd7aa41b"><span class="section-number-3">2.4</span> 2021</h3>
+<div id="outline-container-org315ee0f" class="outline-3">
+<h3 id="org315ee0f"><span class="section-number-3">2.4.</span> 2021</h3>
 <div class="outline-text-3" id="text-2-4">
 <ul class="org-ul">
 <li><b>JOCO</b> A unifying model for locally constrained spanning tree
-problems (<a href="#org0436c10">4</a>, <a href="#orgd425fa4">2</a>, <a href="#orgc0697be">1</a>) <a href="https://link.springer.com/article/10.1007/s10878-021-00740-2">link</a></li>
+problems (<a href="#org4b1b600">4</a>, <a href="#orga94291d">2</a>, <a href="#org5a94427">1</a>) <a href="https://link.springer.com/article/10.1007/s10878-021-00740-2">link</a></li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-orgdafb21d" class="outline-2">
-<h2 id="orgdafb21d"><span class="section-number-2">3</span> Other Works</h2>
+<div id="outline-container-org936677c" class="outline-2">
+<h2 id="org936677c"><span class="section-number-2">3.</span> Other Works</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org4a70c0b" class="outline-3">
-<h3 id="org4a70c0b"><span class="section-number-3">3.1</span> Extended Abstracts and Posters</h3>
+<div id="outline-container-orgb70f0b5" class="outline-3">
+<h3 id="orgb70f0b5"><span class="section-number-3">3.1.</span> Extended Abstracts and Posters</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li><b>SBPO 2019</b> (Portuguese) Um Modelo de Programação Inteira Aplicado ao Problema
 de Alocação de Salas da Universidade Federal do Ceará - Campus
-Crateús (<a href="#org93c94fe">1</a>, <a href="#org53c8e80">3</a>) <a href="https://proceedings.science/proceedings/100090/_papers/106943/download/abstract_file2?lang=pt-br">link</a></li>
+Crateús (<a href="#org5453d36">1</a>, <a href="#org886f406">3</a>) <a href="https://proceedings.science/proceedings/100090/_papers/106943/download/abstract_file2?lang=pt-br">link</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5c50687" class="outline-3">
-<h3 id="org5c50687"><span class="section-number-3">3.2</span> Repositories</h3>
+<div id="outline-container-org663e13e" class="outline-3">
+<h3 id="org663e13e"><span class="section-number-3">3.2.</span> Repositories</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li><a href="https://github.com/luizalbertocviana/cracking-coding-problems">cracking-coding-problems</a> contains C++ solutions to the problems
@@ -377,8 +358,8 @@ have written to learn the language.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcecdb95" class="outline-3">
-<h3 id="orgcecdb95"><span class="section-number-3">3.3</span> Slides</h3>
+<div id="outline-container-org20242f4" class="outline-3">
+<h3 id="org20242f4"><span class="section-number-3">3.3.</span> Slides</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>A talk on modern C++: <a href="slides/cpp.pdf">pdf</a> <a href="slides/cpp.tex">tex</a></li>
@@ -386,51 +367,51 @@ have written to learn the language.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org52d47ee" class="outline-2">
-<h2 id="org52d47ee"><span class="section-number-2">4</span> Undergraduate Tutoring</h2>
+<div id="outline-container-org830a77d" class="outline-2">
+<h2 id="org830a77d"><span class="section-number-2">4.</span> Undergraduate Tutoring</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
-<li>Bruno Teixeira de Sousa (<a href="#org53c8e80">3</a>) <a href="http://repositorio.ufc.br/handle/riufc/48318">link</a></li>
-<li>João Paulo de Araújo (<a href="#org99f4acf">5</a>) <a href="http://repositorio.ufc.br/handle/riufc/43969">link</a></li>
-<li>Marcus Vinícius Martins Melo (<a href="#org99f4acf">5</a>) <a href="http://repositorio.ufc.br/handle/riufc/43970">link</a></li>
-<li>Paulo Henrique Sousa de Araújo (<a href="#org53c8e80">3</a>) <a href="http://repositorio.ufc.br/handle/riufc/49078">link</a></li>
+<li>Bruno Teixeira de Sousa (<a href="#org886f406">3</a>) <a href="http://repositorio.ufc.br/handle/riufc/48318">link</a></li>
+<li>João Paulo de Araújo (<a href="#org430458c">5</a>) <a href="http://repositorio.ufc.br/handle/riufc/43969">link</a></li>
+<li>Marcus Vinícius Martins Melo (<a href="#org430458c">5</a>) <a href="http://repositorio.ufc.br/handle/riufc/43970">link</a></li>
+<li>Paulo Henrique Sousa de Araújo (<a href="#org886f406">3</a>) <a href="http://repositorio.ufc.br/handle/riufc/49078">link</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba07f59" class="outline-2">
-<h2 id="orgba07f59"><span class="section-number-2">5</span> Collaborators</h2>
+<div id="outline-container-orgd5090f5" class="outline-2">
+<h2 id="orgd5090f5"><span class="section-number-2">5.</span> Collaborators</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org6b0008c" class="outline-3">
-<h3 id="org6b0008c"><span class="section-number-3">5.1</span> Professors</h3>
+<div id="outline-container-org7ade9a1" class="outline-3">
+<h3 id="org7ade9a1"><span class="section-number-3">5.1.</span> Professors</h3>
 <div class="outline-text-3" id="text-5-1">
 <ol class="org-ol">
-<li><a id="orgc0697be"></a> Ana Shirley Ferreira da Silva <a href="http://lattes.cnpq.br/2132614695901416">Lattes</a></li>
-<li><a id="orgd425fa4"></a> Ignasi Sau <a href="http://orcid.org/0000-0002-8981-9287">Orcid</a></li>
-<li><a id="org53c8e80"></a> Lisieux Marie Marinho dos Santos Andrade <a href="http://lattes.cnpq.br/8824525263721786">Lattes</a></li>
-<li><a id="org0436c10"></a> Manoel Bezerra Campêlo Neto <a href="http://lattes.cnpq.br/7207626266770213">Lattes</a></li>
-<li><a id="org99f4acf"></a> Rennan Ferreira Dantas <a href="http://lattes.cnpq.br/0192579272041443">Lattes</a></li>
+<li><a id="org5a94427"></a> Ana Shirley Ferreira da Silva <a href="http://lattes.cnpq.br/2132614695901416">Lattes</a></li>
+<li><a id="orga94291d"></a> Ignasi Sau <a href="http://orcid.org/0000-0002-8981-9287">Orcid</a></li>
+<li><a id="org886f406"></a> Lisieux Marie Marinho dos Santos Andrade <a href="http://lattes.cnpq.br/8824525263721786">Lattes</a></li>
+<li><a id="org4b1b600"></a> Manoel Bezerra Campêlo Neto <a href="http://lattes.cnpq.br/7207626266770213">Lattes</a></li>
+<li><a id="org430458c"></a> Rennan Ferreira Dantas <a href="http://lattes.cnpq.br/0192579272041443">Lattes</a></li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org844ff8e" class="outline-3">
-<h3 id="org844ff8e"><span class="section-number-3">5.2</span> Students</h3>
+<div id="outline-container-orgc3c34b4" class="outline-3">
+<h3 id="orgc3c34b4"><span class="section-number-3">5.2.</span> Students</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
-<li><a id="org93c94fe"></a> Bruno Teixeira de Sousa <a href="http://lattes.cnpq.br/5987909872617550">Lattes</a></li>
-<li><a id="org00470de"></a> Francisco Alex Sousa Anchieta <a href="http://lattes.cnpq.br/2903943249633436">Lattes</a></li>
-<li><a id="org82f840a"></a> Marcus Vinícius Martins Melo <a href="http://lattes.cnpq.br/6091624045920112">Lattes</a></li>
-<li><a id="org7c5fb26"></a> Paulo Henrique Sousa de Araújo <a href="http://lattes.cnpq.br/6182698151198285">Lattes</a></li>
+<li><a id="org5453d36"></a> Bruno Teixeira de Sousa <a href="http://lattes.cnpq.br/5987909872617550">Lattes</a></li>
+<li><a id="orge049f97"></a> Francisco Alex Sousa Anchieta <a href="http://lattes.cnpq.br/2903943249633436">Lattes</a></li>
+<li><a id="orgcef7125"></a> Marcus Vinícius Martins Melo <a href="http://lattes.cnpq.br/6091624045920112">Lattes</a></li>
+<li><a id="org6b32138"></a> Paulo Henrique Sousa de Araújo <a href="http://lattes.cnpq.br/6182698151198285">Lattes</a></li>
 </ol>
 </div>
 </div>
 </div>
-<div id="outline-container-org0cba916" class="outline-2">
-<h2 id="org0cba916"><span class="section-number-2">6</span> Undergraduate Disciplines</h2>
+<div id="outline-container-orgf6e65ea" class="outline-2">
+<h2 id="orgf6e65ea"><span class="section-number-2">6.</span> Undergraduate Disciplines</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgae323e5" class="outline-3">
-<h3 id="orgae323e5"><span class="section-number-3">6.1</span> Linear Algebra</h3>
+<div id="outline-container-org1bef75b" class="outline-3">
+<h3 id="org1bef75b"><span class="section-number-3">6.1.</span> Linear Algebra</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li>semester: 2018.2</li>
@@ -438,18 +419,18 @@ have written to learn the language.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1ff92fc" class="outline-3">
-<h3 id="org1ff92fc"><span class="section-number-3">6.2</span> Data Structures</h3>
+<div id="outline-container-org370ff83" class="outline-3">
+<h3 id="org370ff83"><span class="section-number-3">6.2.</span> Data Structures</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li>semester: 2016.2, 2018.2</li>
-<li>lecture notes (in Portuguese) kindly provided by <a href="#org00470de">2</a>: <a href="ed/document.pdf">pdf</a></li>
+<li>lecture notes (in Portuguese) kindly provided by <a href="#orge049f97">2</a>: <a href="ed/document.pdf">pdf</a></li>
 <li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_btEpfhW7T9Sw-H2g3rihi-I">youtube</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org401cb5f" class="outline-3">
-<h3 id="org401cb5f"><span class="section-number-3">6.3</span> Advanced Data Structures</h3>
+<div id="outline-container-orgcb2e036" class="outline-3">
+<h3 id="orgcb2e036"><span class="section-number-3">6.3.</span> Advanced Data Structures</h3>
 <div class="outline-text-3" id="text-6-3">
 <ul class="org-ul">
 <li>semester: 2020.1</li>
@@ -458,66 +439,90 @@ have written to learn the language.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2d494a8" class="outline-3">
-<h3 id="org2d494a8"><span class="section-number-3">6.4</span> Automata and Formal Languages</h3>
+<div id="outline-container-org8cd2f67" class="outline-3">
+<h3 id="org8cd2f67"><span class="section-number-3">6.4.</span> Automata and Formal Languages</h3>
 <div class="outline-text-3" id="text-6-4">
 <ul class="org-ul">
 <li>semester: 2018.2, 2019.2</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org06a5538" class="outline-3">
-<h3 id="org06a5538"><span class="section-number-3">6.5</span> Introduction to Discrete Mathematics</h3>
+<div id="outline-container-orge1a6860" class="outline-3">
+<h3 id="orge1a6860"><span class="section-number-3">6.5.</span> Introduction to Discrete Mathematics</h3>
 <div class="outline-text-3" id="text-6-5">
 <ul class="org-ul">
 <li>semester: 2017.2</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf165401" class="outline-3">
-<h3 id="orgf165401"><span class="section-number-3">6.6</span> Computational Mathematics</h3>
+<div id="outline-container-orgddd2c4f" class="outline-3">
+<h3 id="orgddd2c4f"><span class="section-number-3">6.6.</span> Computational Mathematics</h3>
 <div class="outline-text-3" id="text-6-6">
 <ul class="org-ul">
-<li>semester: 2017.1, 2018.1, 2019.1, 2020.1</li>
+<li>semester: 2017.1, 2018.1, 2019.1, 2020.1, 2021.1</li>
 <li>lecture notes (in Portuguese): <a href="https://github.com/luiz-classrooms/mc-lecture-notes">repository</a></li>
 <li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_bu6YaDX-AwqmGmr9BhVx_Zr">youtube</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6949acd" class="outline-3">
-<h3 id="org6949acd"><span class="section-number-3">6.7</span> Discrete Mathematics</h3>
+<div id="outline-container-org341f17a" class="outline-3">
+<h3 id="org341f17a"><span class="section-number-3">6.7.</span> Numerical Calculus</h3>
 <div class="outline-text-3" id="text-6-7">
+<ul class="org-ul">
+<li>semester: 2021.1</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org496ae37" class="outline-3">
+<h3 id="org496ae37"><span class="section-number-3">6.8.</span> Operations Research</h3>
+<div class="outline-text-3" id="text-6-8">
+<ul class="org-ul">
+<li>semester: 2021.2</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29a5964" class="outline-3">
+<h3 id="org29a5964"><span class="section-number-3">6.9.</span> Discrete Mathematics</h3>
+<div class="outline-text-3" id="text-6-9">
 <ul class="org-ul">
 <li>semester: 2016.2</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7ffbcc1" class="outline-3">
-<h3 id="org7ffbcc1"><span class="section-number-3">6.8</span> Functional Programming</h3>
-<div class="outline-text-3" id="text-6-8">
+<div id="outline-container-org797fd0d" class="outline-3">
+<h3 id="org797fd0d"><span class="section-number-3">6.10.</span> Functional Programming</h3>
+<div class="outline-text-3" id="text-6-10">
 <ul class="org-ul">
-<li>semester: 2017.1, 2018.1, 2019.1, 2020.2</li>
+<li>semester: 2017.1, 2018.1, 2019.1, 2020.2, 2021.2</li>
 <li>lecture notes (in Portuguese): <a href="https://github.com/luiz-classrooms/pf-lecture-notes">repository</a></li>
 <li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_bt2iFyeOYttbswIwbQNbMSM">youtube</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9517bdb" class="outline-3">
-<h3 id="org9517bdb"><span class="section-number-3">6.9</span> Algorithm Design and Analysis</h3>
-<div class="outline-text-3" id="text-6-9">
+<div id="outline-container-org7876d72" class="outline-3">
+<h3 id="org7876d72"><span class="section-number-3">6.11.</span> Algorithm Design and Analysis</h3>
+<div class="outline-text-3" id="text-6-11">
 <ul class="org-ul">
-<li>semester: 2019.2, 2020.2</li>
+<li>semester: 2019.2, 2020.2, 2021.2</li>
 <li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_buAXDjLZl32FpSbsVZJ8OZH">youtube</a></li>
 <li>video playlist (in Portuguese) of some sorting algorithms
 implemented in C++ at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_btDoim_kxpenbusvTbxZ9ub">youtube</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfd13b79" class="outline-3">
-<h3 id="orgfd13b79"><span class="section-number-3">6.10</span> Theory of Computation</h3>
-<div class="outline-text-3" id="text-6-10">
+<div id="outline-container-org559e753" class="outline-3">
+<h3 id="org559e753"><span class="section-number-3">6.12.</span> Graph Algorithms</h3>
+<div class="outline-text-3" id="text-6-12">
 <ul class="org-ul">
-<li>semester: 2017.2, 2018.2</li>
+<li>semester: 2021.1</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbc6e8c4" class="outline-3">
+<h3 id="orgbc6e8c4"><span class="section-number-3">6.13.</span> Theory of Computation</h3>
+<div class="outline-text-3" id="text-6-13">
+<ul class="org-ul">
+<li>semester: 2017.2, 2018.2, 2021.1</li>
 </ul>
 </div>
 </div>
@@ -525,7 +530,7 @@ implemented in C++ at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luiz Alberto do Carmo Viana</p>
-<p class="date">Created: 2021-04-20 ter 16:24</p>
+<p class="date">Created: 2021-10-27 qua 20:17</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

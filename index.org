@@ -87,19 +87,25 @@ You can visit this site's repository [[https://github.com/luizalbertocviana/luiz
 ** Introduction to Discrete Mathematics
    - semester: 2017.2
 ** Computational Mathematics
-   - semester: 2017.1, 2018.1, 2019.1, 2020.1
+   - semester: 2017.1, 2018.1, 2019.1, 2020.1, 2021.1
    - lecture notes (in Portuguese): [[https://github.com/luiz-classrooms/mc-lecture-notes][repository]]
    - video playlist (in Portuguese) at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_bu6YaDX-AwqmGmr9BhVx_Zr][youtube]]
+** Numerical Calculus
+   - semester: 2021.1
+** Operations Research
+   - semester: 2021.2
 ** Discrete Mathematics
    - semester: 2016.2
 ** Functional Programming
-   - semester: 2017.1, 2018.1, 2019.1, 2020.2
+   - semester: 2017.1, 2018.1, 2019.1, 2020.2, 2021.2
    - lecture notes (in Portuguese): [[https://github.com/luiz-classrooms/pf-lecture-notes][repository]]
    - video playlist (in Portuguese) at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_bt2iFyeOYttbswIwbQNbMSM][youtube]]
 ** Algorithm Design and Analysis
-   - semester: 2019.2, 2020.2
+   - semester: 2019.2, 2020.2, 2021.2
    - video playlist (in Portuguese) at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_buAXDjLZl32FpSbsVZJ8OZH][youtube]]
    - video playlist (in Portuguese) of some sorting algorithms
      implemented in C++ at [[https://www.youtube.com/playlist?list=PLRDuHd2Ia_btDoim_kxpenbusvTbxZ9ub][youtube]]
+** Graph Algorithms
+   - semester: 2021.1
 ** Theory of Computation
-   - semester: 2017.2, 2018.2
+   - semester: 2017.2, 2018.2, 2021.1

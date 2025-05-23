@@ -1,537 +1,368 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2021-10-27 qua 20:17 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Luiz Alberto do Carmo Viana</title>
-<meta name="author" content="Luiz Alberto do Carmo Viana" />
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-</style>
-<link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
-<link rel="stylesheet" type="text/css" href="styles/bigblow/css/hideshow.css"/>
-<script type="text/javascript" src="styles/bigblow/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/jquery.localscroll-min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/jquery.zclip.min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/bigblow.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
-<script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luiz Viana - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F5F5F5;
+            --text-color: #333333;
+            --accent-color: #4A90E2;
+            --section-bg: #FFFFFF;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1A1A1A;
+            --text-color: #E0E0E0;
+            --accent-color: #6AB0FF;
+            --section-bg: #2A2A2A;
+        }
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--section-bg);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: transform 0.3s;
+        }
+        #theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            background: var(--section-bg);
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: var(--accent-color);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .header-info {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .header-info p {
+            margin: 0.2rem 0;
+            font-size: 0.9rem;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-color);
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+            font-size: 0.9rem;
+        }
+        .download-btn:hover {
+            background: #3A80D2;
+        }
+        .social-icons a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+        .job-entry {
+            margin-bottom: 1.5rem;
+        }
+        .job-entry strong {
+            font-weight: 700;
+        }
+        .job-period {
+            float: right;
+            font-style: italic;
+            color: var(--text-color);
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+        ul li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        ul li:before {
+            content: '•';
+            position: absolute;
+            left: -1rem;
+            color: var(--accent-color);
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 0.5rem;
+            }
+            .job-period {
+                float: none;
+                display: block;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="content" class="content">
-<h1 class="title">Luiz Alberto do Carmo Viana</h1>
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org9f1444a">1. Contact</a></li>
-<li><a href="#org161a5d1">2. Articles</a>
-<ul>
-<li><a href="#org107a94d">2.1. 2017</a></li>
-<li><a href="#org1743787">2.2. 2019</a></li>
-<li><a href="#orgd44772d">2.3. 2020</a></li>
-<li><a href="#org315ee0f">2.4. 2021</a></li>
-</ul>
-</li>
-<li><a href="#org936677c">3. Other Works</a>
-<ul>
-<li><a href="#orgb70f0b5">3.1. Extended Abstracts and Posters</a></li>
-<li><a href="#org663e13e">3.2. Repositories</a></li>
-<li><a href="#org20242f4">3.3. Slides</a></li>
-</ul>
-</li>
-<li><a href="#org830a77d">4. Undergraduate Tutoring</a></li>
-<li><a href="#orgd5090f5">5. Collaborators</a>
-<ul>
-<li><a href="#org7ade9a1">5.1. Professors</a></li>
-<li><a href="#orgc3c34b4">5.2. Students</a></li>
-</ul>
-</li>
-<li><a href="#orgf6e65ea">6. Undergraduate Disciplines</a>
-<ul>
-<li><a href="#org1bef75b">6.1. Linear Algebra</a></li>
-<li><a href="#org370ff83">6.2. Data Structures</a></li>
-<li><a href="#orgcb2e036">6.3. Advanced Data Structures</a></li>
-<li><a href="#org8cd2f67">6.4. Automata and Formal Languages</a></li>
-<li><a href="#orge1a6860">6.5. Introduction to Discrete Mathematics</a></li>
-<li><a href="#orgddd2c4f">6.6. Computational Mathematics</a></li>
-<li><a href="#org341f17a">6.7. Numerical Calculus</a></li>
-<li><a href="#org496ae37">6.8. Operations Research</a></li>
-<li><a href="#org29a5964">6.9. Discrete Mathematics</a></li>
-<li><a href="#org797fd0d">6.10. Functional Programming</a></li>
-<li><a href="#org7876d72">6.11. Algorithm Design and Analysis</a></li>
-<li><a href="#org559e753">6.12. Graph Algorithms</a></li>
-<li><a href="#orgbc6e8c4">6.13. Theory of Computation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<p>
-Professor and researcher at Federal University of Ceará, Crateús
-Campus. I am lecturing mainly in the Computer Science Graduation
-Course.
-</p>
+    <header>
+        <div>
+            <h1>Luiz Viana</h1>
+            <p>Software Developer</p>
+        </div>
+        <nav>
+          <!-- <a href="#summary">Summary</a>
+               <a href="#skills">Skills</a>
+               <a href="#experience">Experience</a>
+               <a href="#education">Education</a>
+               <a href="#contact">Contact</a> -->
+            <a href="./cv.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+            <button id="theme-toggle">☀️</button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header-info">
+            <p>luizalbertocviana@gmail.com • +55 88 9 9917 6296 • Fortaleza, Brazil</p>
+            <p>
+              <!-- <a href="https://linkedin.com/in/luiz-alberto-430b5239" target="_blank">linkedin.com/in/luiz-alberto-430b5239</a> •
+                   <a href="https://github.com/luizalbertocviana" target="_blank">github.com/luizalbertocviana</a> -->
+                <a href="https://linkedin.com/in/luiz-alberto-430b5239" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/luizalbertocviana" target="_blank"><i class="fab fa-github"></i></a>
+            </p>
+            <p>Languages: English (Advanced), Portuguese (Fluent/Native)</p>
+        </div>
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Results-driven Software Developer with over 11 years of postgraduate experience designing and deploying scalable backend systems using Clojure, Java, Rust, and AWS. Specialized in functional programming, microservices, and DeFi smart contracts, with a track record of delivering robust solutions at Amazon and innovative startups.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming:</strong> Clojure, Java, Rust, Python, JavaScript, TypeScript, Haskell</li>
+                <li><strong>Tools:</strong> AWS (CDK, S3, IAM, SQS, ECS, Step Functions), PostgreSQL, Node.js, Re-Frame, Metabase, Pandas, Streamlit</li>
+                <li><strong>Domains:</strong> Backend Development, Functional Programming, Algorithm Design, Database Architecture</li>
+                <li><strong>Collaboration:</strong> Remote Team Coordination (Slack, Jira, Git, GitHub), Agile Methodologies</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="job-entry">
+                <strong>Independent Personal Projects, Personal Finances</strong> <span class="job-period">Sep 2024 – Present</span>
+                <ul>
+                    <li>Designed and deployed financial models using Python, Pandas, Metabase, and Streamlit, improving investment decision accuracy.</li>
+                    <li>Optimized SQL queries on PostgreSQL for real-time BI dashboards, enhancing data retrieval efficiency.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <strong>Software Development Engineer I, Amazon</strong> <span class="job-period">Sep 2022 – Sep 2024</span>
+                <ul>
+                    <li>Built and maintained microservice features for invoice issuance in Java and Python, focusing on codebase quality and test coverage.</li>
+                    <li>Deployed Infrastructure as Code with AWS CDK, streamlining AWS service integrations.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <strong>Smart Contract Developer, Dy.Finance</strong> <span class="job-period">Nov 2021 – Sep 2022</span>
+                <ul>
+                    <li>Authored Web3 DeFi smart contracts on Stacks Blockchain using Clarity.</li>
+                    <li>Implemented fixed-point arithmetic models in Clarity for derivative asset valuation, improving accuracy.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <strong>Clojure Backend Developer, Reify Health & Flexiana</strong> <span class="job-period">Jul 2021 – Nov 2021</span>
+                <ul>
+                    <li>Designed document management and user tracking systems using Clojure, PostgreSQL, and AWS S3 and AWS IAM.</li>
+                    <li>Optimized database schemas, enhancing query performance for job application platforms.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <strong>Software Developer, Environment Ministry of Ceará</strong> <span class="job-period">Jan 2021 – Jun 2021</span>
+                <ul>
+                    <li>Created a WebGIS application with JavaScript, OpenLayers, and PostGIS, enabling geospatial data analysis.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <strong>Professor / Researcher, Federal University of Ceará</strong> <span class="job-period">Jul 2016 – Mar 2022</span>
+                <ul>
+                    <li>Taught Algorithm Design and Functional Programming, mentoring students in Combinatorial Optimization.</li>
+                    <li>Built a concurrent Branch-and-Bound framework in Rust, optimizing combinatorial solutions.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="job-entry">
+                <strong>M.Sc., Computer Science, Federal University of Ceará</strong> <span class="job-period">2014 – 2016</span>
+                <ul>
+                    <li>Thesis: Two Dependency Constrained Spanning Tree Problems, with models developed in Python and IBM CPLEX, developing efficient algorithms for network optimization.</li>
+                    <li>Relevant Coursework: Algorithm Design, Combinatorial Optimization, Functional Programming.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <strong>B.Sc., Computer Science, Federal University of Ceará</strong> <span class="job-period">2010 – 2014</span>
+            </div>
+        </section>
+        <!-- <section id="contact">
+             <h2>Contact</h2>
+             <p>Email: luizalbertocviana@gmail.com<br>Phone: +55 88 9 9917 6296<br>Location: Fortaleza, Brazil</p>
+             <div class="social-icons">
+             <a href="https://linkedin.com/in/luiz-alberto-430b5239" target="_blank"><i class="fab fa-linkedin"></i></a>
+             <a href="https://github.com/luizalbertocviana" target="_blank"><i class="fab fa-github"></i></a>
+             </div>
+             </section> -->
+        <section id="repositories">
+            <h2>Repositories</h2>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/clojure-shopping-cart-api"> clojure-shopping-cart-api</a>
+                <ul>
+                    <li>A Clojure REST API for an e-commerce shopping cart.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/rust-workspace"> rust-workspace</a>
+                <ul>
+                    <li>Some data structures and a concurrent branch and bound framework written in Rust.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/data-structures-cpp"> data-structures-cpp</a>
+                <ul>
+                    <li>Several data structures implemetned in C++ for lecturing purposes.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/cracking-coding-problems"> cracking-coding-problems</a>
+                <ul>
+                    <li>Some C++ solutions to questions from the book Cracking the Code Interview.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/haskell-experiments"> haskell-experiments</a>
+                <ul>
+                    <li>Reimplementation of several parts of Haskell prelude for lecturing purposes.</li>
+                    <li>Contains some data structure implementations as well.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/lisp-workspace"> lisp-workspace</a>
+                <ul>
+                    <li>Brings several CS topics implemented in lisp, such as data structures, lazy evaluation and futures.</li>
+                    <li>Contains macro definitions for array operations, loop unrolling, besides anaphoric and threading macros.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/work-sample-test"> work-sample-test</a>
+                <ul>
+                    <li>A backend Clojure test I made as part of hiring process for EmbraerX.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/stack-lang"> stack-lang</a>
+                <ul>
+                    <li>A simple stack lang implementation in Clojure as part of hiring process for Red Planet Labs.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/audience-republic-test"> audience-republic-test</a>
+                <ul>
+                    <li>Some graph algorithms in Clojure as part of hiring process for Audience Republic.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <a href="https://github.com/luizalbertocviana/nethack4-nix"> nethack4-nix</a>
+                <ul>
+                    <li>My first Nix derivation. Nethack4 built as a Nix derivation for learning purposes.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
 
-<p>
-You can view my Lattes curriculum at <a href="http://lattes.cnpq.br/2028165237751191">http://lattes.cnpq.br/2028165237751191</a>
-</p>
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            toggleButton.textContent = '🌙';
+        }
 
-<p>
-You can visit this site's repository <a href="https://github.com/luizalbertocviana/luizalbertocviana.github.io">here</a>.
-</p>
+        toggleButton.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'dark') {
+                htmlElement.removeAttribute('data-theme');
+                toggleButton.textContent = '☀️';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                toggleButton.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
 
-<div id="outline-container-org9f1444a" class="outline-2">
-<h2 id="org9f1444a"><span class="section-number-2">1.</span> Contact</h2>
-<div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li>Personal email: <a href="mailto:luizalbertocviana@gmail.com">luizalbertocviana@gmail.com</a></li>
-<li>Professional email: <a href="mailto:luizalberto@crateus.ufc.br">luizalberto@crateus.ufc.br</a></li>
-<li>Github: <a href="https://github.com/luizalbertocviana">https://github.com/luizalbertocviana</a></li>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/luiz-alberto-430b5239">https://www.linkedin.com/in/luiz-alberto-430b5239</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org161a5d1" class="outline-2">
-<h2 id="org161a5d1"><span class="section-number-2">2.</span> Articles</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-org107a94d" class="outline-3">
-<h3 id="org107a94d"><span class="section-number-3">2.1.</span> 2017</h3>
-<div class="outline-text-3" id="text-2-1">
-<ul class="org-ul">
-<li><b>CSBC</b> The Least-Dependency Constrained Spanning Tree Problem
-(<a href="#org4b1b600">4</a>) <a href="http://csbc2017.mackenzie.br/public/files/all/anais-csbc-2017.pdf">link</a></li>
-<li><b>SBPO</b> Two Dependency Constrained Spanning Tree Problems (<a href="#org4b1b600">4</a>)
-<a href="http://www.sbpo2017.iltc.br/pdf/168962.pdf">link</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org1743787" class="outline-3">
-<h3 id="org1743787"><span class="section-number-3">2.2.</span> 2019</h3>
-<div class="outline-text-3" id="text-2-2">
-<ul class="org-ul">
-<li><b>SBPO</b> (Portuguese) Um Algoritmo Exato para o Problema da Biclique Induzida
-Balanceada Máxima com Partições em Cliques e Bonecas Russas
-(<a href="#orgcef7125">3</a>, <a href="#org430458c">5</a>) <a href="https://proceedings.science/proceedings/100090/_papers/106757/download/abstract_file2?lang=pt-br">link</a></li>
-<li><b>SBPO</b> (Portuguese) Uma Abordagem Híbrida Exata-Heurística Aplicada ao Problema
-do Ciclo Mediano sem Restrições de Capacidade (<a href="#org6b32138">4</a>, <a href="#org886f406">3</a>)
-<a href="https://proceedings.science/proceedings/100090/_papers/106758/download/abstract_file2?lang=pt-br">link</a></li>
-<li><b>ENTCS</b> The Generalized Dependency Constrained Spanning Tree
-Problem (<a href="#org4b1b600">4</a>) <a href="https://reader.elsevier.com/reader/sd/pii/S1571066119301136?token=5C49470DC0048D2D2C2B3AD4828CCBA66C7AE52E3FEA38F89E30BA45D83DFBCDCF87FE5A8D40B9439009536BC62A65D4">link</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgd44772d" class="outline-3">
-<h3 id="orgd44772d"><span class="section-number-3">2.3.</span> 2020</h3>
-<div class="outline-text-3" id="text-2-3">
-<ul class="org-ul">
-<li><b>ITOR</b> Two Dependency Constrained Spanning Tree Problems (<a href="#org4b1b600">4</a>)
-<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12690">link</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org315ee0f" class="outline-3">
-<h3 id="org315ee0f"><span class="section-number-3">2.4.</span> 2021</h3>
-<div class="outline-text-3" id="text-2-4">
-<ul class="org-ul">
-<li><b>JOCO</b> A unifying model for locally constrained spanning tree
-problems (<a href="#org4b1b600">4</a>, <a href="#orga94291d">2</a>, <a href="#org5a94427">1</a>) <a href="https://link.springer.com/article/10.1007/s10878-021-00740-2">link</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div id="outline-container-org936677c" class="outline-2">
-<h2 id="org936677c"><span class="section-number-2">3.</span> Other Works</h2>
-<div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-orgb70f0b5" class="outline-3">
-<h3 id="orgb70f0b5"><span class="section-number-3">3.1.</span> Extended Abstracts and Posters</h3>
-<div class="outline-text-3" id="text-3-1">
-<ul class="org-ul">
-<li><b>SBPO 2019</b> (Portuguese) Um Modelo de Programação Inteira Aplicado ao Problema
-de Alocação de Salas da Universidade Federal do Ceará - Campus
-Crateús (<a href="#org5453d36">1</a>, <a href="#org886f406">3</a>) <a href="https://proceedings.science/proceedings/100090/_papers/106943/download/abstract_file2?lang=pt-br">link</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org663e13e" class="outline-3">
-<h3 id="org663e13e"><span class="section-number-3">3.2.</span> Repositories</h3>
-<div class="outline-text-3" id="text-3-2">
-<ul class="org-ul">
-<li><a href="https://github.com/luizalbertocviana/cracking-coding-problems">cracking-coding-problems</a> contains C++ solutions to the problems
-presented in the Cracking the Coding Interview book.</li>
-<li><a href="https://github.com/luizalbertocviana/data-structures-cpp">data-structures-cpp</a> is a collection of classic data structures
-implemented in C++ for didatic purposes.</li>
-<li><a href="https://github.com/luizalbertocviana/dotfiles">dotfiles</a> contais my work environment setup. Highlight for Emacs,
-vim and i3wm setup.</li>
-<li><a href="https://github.com/luizalbertocviana/lisp-experiments">lisp-experiments</a> is a collection of Common Lisp source code I
-have written to learn the language.</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org20242f4" class="outline-3">
-<h3 id="org20242f4"><span class="section-number-3">3.3.</span> Slides</h3>
-<div class="outline-text-3" id="text-3-3">
-<ul class="org-ul">
-<li>A talk on modern C++: <a href="slides/cpp.pdf">pdf</a> <a href="slides/cpp.tex">tex</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div id="outline-container-org830a77d" class="outline-2">
-<h2 id="org830a77d"><span class="section-number-2">4.</span> Undergraduate Tutoring</h2>
-<div class="outline-text-2" id="text-4">
-<ul class="org-ul">
-<li>Bruno Teixeira de Sousa (<a href="#org886f406">3</a>) <a href="http://repositorio.ufc.br/handle/riufc/48318">link</a></li>
-<li>João Paulo de Araújo (<a href="#org430458c">5</a>) <a href="http://repositorio.ufc.br/handle/riufc/43969">link</a></li>
-<li>Marcus Vinícius Martins Melo (<a href="#org430458c">5</a>) <a href="http://repositorio.ufc.br/handle/riufc/43970">link</a></li>
-<li>Paulo Henrique Sousa de Araújo (<a href="#org886f406">3</a>) <a href="http://repositorio.ufc.br/handle/riufc/49078">link</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgd5090f5" class="outline-2">
-<h2 id="orgd5090f5"><span class="section-number-2">5.</span> Collaborators</h2>
-<div class="outline-text-2" id="text-5">
-</div>
-<div id="outline-container-org7ade9a1" class="outline-3">
-<h3 id="org7ade9a1"><span class="section-number-3">5.1.</span> Professors</h3>
-<div class="outline-text-3" id="text-5-1">
-<ol class="org-ol">
-<li><a id="org5a94427"></a> Ana Shirley Ferreira da Silva <a href="http://lattes.cnpq.br/2132614695901416">Lattes</a></li>
-<li><a id="orga94291d"></a> Ignasi Sau <a href="http://orcid.org/0000-0002-8981-9287">Orcid</a></li>
-<li><a id="org886f406"></a> Lisieux Marie Marinho dos Santos Andrade <a href="http://lattes.cnpq.br/8824525263721786">Lattes</a></li>
-<li><a id="org4b1b600"></a> Manoel Bezerra Campêlo Neto <a href="http://lattes.cnpq.br/7207626266770213">Lattes</a></li>
-<li><a id="org430458c"></a> Rennan Ferreira Dantas <a href="http://lattes.cnpq.br/0192579272041443">Lattes</a></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-orgc3c34b4" class="outline-3">
-<h3 id="orgc3c34b4"><span class="section-number-3">5.2.</span> Students</h3>
-<div class="outline-text-3" id="text-5-2">
-<ol class="org-ol">
-<li><a id="org5453d36"></a> Bruno Teixeira de Sousa <a href="http://lattes.cnpq.br/5987909872617550">Lattes</a></li>
-<li><a id="orge049f97"></a> Francisco Alex Sousa Anchieta <a href="http://lattes.cnpq.br/2903943249633436">Lattes</a></li>
-<li><a id="orgcef7125"></a> Marcus Vinícius Martins Melo <a href="http://lattes.cnpq.br/6091624045920112">Lattes</a></li>
-<li><a id="org6b32138"></a> Paulo Henrique Sousa de Araújo <a href="http://lattes.cnpq.br/6182698151198285">Lattes</a></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="outline-container-orgf6e65ea" class="outline-2">
-<h2 id="orgf6e65ea"><span class="section-number-2">6.</span> Undergraduate Disciplines</h2>
-<div class="outline-text-2" id="text-6">
-</div>
-<div id="outline-container-org1bef75b" class="outline-3">
-<h3 id="org1bef75b"><span class="section-number-3">6.1.</span> Linear Algebra</h3>
-<div class="outline-text-3" id="text-6-1">
-<ul class="org-ul">
-<li>semester: 2018.2</li>
-<li>video playlist (in Portuguese) on Abstract Algebra at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_bslqqkwYQHqRx_cPu4dfDaX">youtube</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org370ff83" class="outline-3">
-<h3 id="org370ff83"><span class="section-number-3">6.2.</span> Data Structures</h3>
-<div class="outline-text-3" id="text-6-2">
-<ul class="org-ul">
-<li>semester: 2016.2, 2018.2</li>
-<li>lecture notes (in Portuguese) kindly provided by <a href="#orge049f97">2</a>: <a href="ed/document.pdf">pdf</a></li>
-<li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_btEpfhW7T9Sw-H2g3rihi-I">youtube</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgcb2e036" class="outline-3">
-<h3 id="orgcb2e036"><span class="section-number-3">6.3.</span> Advanced Data Structures</h3>
-<div class="outline-text-3" id="text-6-3">
-<ul class="org-ul">
-<li>semester: 2020.1</li>
-<li>lecture notes (in Portuguese): <a href="https://github.com/luiz-classrooms/eda-lecture-notes">repsitory</a></li>
-<li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_btEpfhW7T9Sw-H2g3rihi-I">youtube</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org8cd2f67" class="outline-3">
-<h3 id="org8cd2f67"><span class="section-number-3">6.4.</span> Automata and Formal Languages</h3>
-<div class="outline-text-3" id="text-6-4">
-<ul class="org-ul">
-<li>semester: 2018.2, 2019.2</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orge1a6860" class="outline-3">
-<h3 id="orge1a6860"><span class="section-number-3">6.5.</span> Introduction to Discrete Mathematics</h3>
-<div class="outline-text-3" id="text-6-5">
-<ul class="org-ul">
-<li>semester: 2017.2</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgddd2c4f" class="outline-3">
-<h3 id="orgddd2c4f"><span class="section-number-3">6.6.</span> Computational Mathematics</h3>
-<div class="outline-text-3" id="text-6-6">
-<ul class="org-ul">
-<li>semester: 2017.1, 2018.1, 2019.1, 2020.1, 2021.1</li>
-<li>lecture notes (in Portuguese): <a href="https://github.com/luiz-classrooms/mc-lecture-notes">repository</a></li>
-<li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_bu6YaDX-AwqmGmr9BhVx_Zr">youtube</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org341f17a" class="outline-3">
-<h3 id="org341f17a"><span class="section-number-3">6.7.</span> Numerical Calculus</h3>
-<div class="outline-text-3" id="text-6-7">
-<ul class="org-ul">
-<li>semester: 2021.1</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org496ae37" class="outline-3">
-<h3 id="org496ae37"><span class="section-number-3">6.8.</span> Operations Research</h3>
-<div class="outline-text-3" id="text-6-8">
-<ul class="org-ul">
-<li>semester: 2021.2</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org29a5964" class="outline-3">
-<h3 id="org29a5964"><span class="section-number-3">6.9.</span> Discrete Mathematics</h3>
-<div class="outline-text-3" id="text-6-9">
-<ul class="org-ul">
-<li>semester: 2016.2</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org797fd0d" class="outline-3">
-<h3 id="org797fd0d"><span class="section-number-3">6.10.</span> Functional Programming</h3>
-<div class="outline-text-3" id="text-6-10">
-<ul class="org-ul">
-<li>semester: 2017.1, 2018.1, 2019.1, 2020.2, 2021.2</li>
-<li>lecture notes (in Portuguese): <a href="https://github.com/luiz-classrooms/pf-lecture-notes">repository</a></li>
-<li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_bt2iFyeOYttbswIwbQNbMSM">youtube</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org7876d72" class="outline-3">
-<h3 id="org7876d72"><span class="section-number-3">6.11.</span> Algorithm Design and Analysis</h3>
-<div class="outline-text-3" id="text-6-11">
-<ul class="org-ul">
-<li>semester: 2019.2, 2020.2, 2021.2</li>
-<li>video playlist (in Portuguese) at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_buAXDjLZl32FpSbsVZJ8OZH">youtube</a></li>
-<li>video playlist (in Portuguese) of some sorting algorithms
-implemented in C++ at <a href="https://www.youtube.com/playlist?list=PLRDuHd2Ia_btDoim_kxpenbusvTbxZ9ub">youtube</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org559e753" class="outline-3">
-<h3 id="org559e753"><span class="section-number-3">6.12.</span> Graph Algorithms</h3>
-<div class="outline-text-3" id="text-6-12">
-<ul class="org-ul">
-<li>semester: 2021.1</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgbc6e8c4" class="outline-3">
-<h3 id="orgbc6e8c4"><span class="section-number-3">6.13.</span> Theory of Computation</h3>
-<div class="outline-text-3" id="text-6-13">
-<ul class="org-ul">
-<li>semester: 2017.2, 2018.2, 2021.1</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="author">Author: Luiz Alberto do Carmo Viana</p>
-<p class="date">Created: 2021-10-27 qua 20:17</p>
-<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
-</div>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
